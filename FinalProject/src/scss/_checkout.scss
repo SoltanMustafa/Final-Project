@@ -1,0 +1,464 @@
+.main-checkout {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  .checkout-top {
+    width: 100%;
+    border-top: 1px solid rgb(233, 233, 233);
+    border-bottom: 1px solid rgb(233, 233, 233);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .top-content-holder {
+      max-width: 1105px;
+      width: 100%;
+      padding: 21px;
+      .text-content {
+        padding: 0 21px;
+        .text-content-inner {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          h1 {
+            font-size: 24px;
+            color: #000;
+            line-height: 1.2;
+          }
+          span {
+            display: inline-block;
+            cursor: pointer;
+            svg {
+              width: 22px;
+              height: 22px;
+              fill: rgb(0, 131, 193);
+            }
+            &:hover {
+              svg {
+                fill: rgb(0, 158, 232);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .checkout-main-body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    input {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      overflow: visible;
+      padding: 13.5px 11px;
+      border: 1px solid rgb(218, 218, 218);
+      &::placeholder {
+        color: #707070;
+      }
+      &:focus {
+        border: 2px solid rgb(0, 131, 193);
+      }
+    }
+    .left-part {
+      flex: 0 0 56.25%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      order: 1;
+      .left-part-inside {
+        padding: 21px;
+        max-width: 650px;
+        width: 100%;
+        .left-part-inner {
+          padding: 21px;
+          width: 100%;
+          .content-holder {
+            .checkout-form {
+              .form-inside-div {
+                display: flex;
+                flex-direction: column;
+                .checkout-form-top {
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: wrap;
+                  margin-bottom: 32px;
+                  gap: 14px;
+                  .contact-div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .contact-span {
+                      color: #000;
+                      font-size: 24px;
+                    }
+                    .question-span {
+                      a {
+                        padding-top: 4px;
+                        margin-left: 3px;
+                        display: inline-block;
+                        text-decoration: underline;
+                        color: rgb(0, 131, 193);
+                        &:hover {
+                          color: rgb(0, 158, 232);
+                        }
+                      }
+                    }
+                  }
+                  .email-div {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    gap: 14px;
+                    .email-input-holder {
+                      width: 100%;
+                      height: 50px;
+                      border-radius: 5px;
+                    }
+                    .check-email-holder {
+                      width: 100%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: flex-start;
+                      gap: 10px;
+                      input {
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 5px;
+                        border: 1px solid #dedede;
+                        cursor: pointer;
+                      }
+                      span {
+                        color: #000;
+                      }
+                    }
+                  }
+                }
+                .checkout-form-mid {
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: wrap;
+                  gap: 14px;
+                  margin-bottom: 32px;
+                  .delivery-div {
+                    span {
+                      color: #000;
+                      font-size: 24px;
+                    }
+                  }
+                  .mid-all-forms {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    gap: 14px;
+                    margin-bottom: 14px;
+                    .select-div {
+                      width: 100%;
+                      height: 50px;
+                      position: relative;
+                      label {
+                        position: absolute;
+                        left: 12px;
+                        top: 7px;
+                        span {
+                          color: #707070;
+                          font-size: 13px;
+                        }
+                      }
+                      select {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        appearance: none;
+                        border-radius: 5px;
+                        overflow: visible;
+                        color: #000;
+                        padding: 21px 30px 6px 11px;
+                        border: 1px solid rgb(218, 218, 218);
+                        &:focus {
+                          border: 2px solid rgb(0, 131, 193);
+                        }
+                      }
+                      .angel-down-div {
+                        position: absolute;
+                        right: 14px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        i {
+                          font-size: 13px;
+                        }
+                      }
+                    }
+                    .name-surname-div {
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      width: 100%;
+                      height: auto;
+                      .name-div {
+                        flex: 0 0 49%;
+                        height: 50px;
+                      }
+                      .surname-div {
+                        flex: 0 0 49%;
+                        height: 50px;
+                      }
+                    }
+                    .postal-city-div {
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      width: 100%;
+                      height: auto;
+                      .postal-div {
+                        flex: 0 0 49%;
+                        height: 50px;
+                      }
+                      .city-div {
+                        flex: 0 0 49%;
+                        height: 50px;
+                      }
+                    }
+                    .address-input-holder {
+                      width: 100%;
+                      height: 50px;
+                      border-radius: 5px;
+                    }
+                    .add-apartment-btn {
+                      width: 100%;
+                      display: block;
+                      .add-inside-apartment {
+                        padding-left: 11px;
+                        .apartment-btn-itself {
+                          display: flex;
+                          align-items: center;
+                          gap: 5px;
+                          justify-content: flex-start;
+                          color: rgb(0, 131, 193);
+                          &:hover {
+                            color: rgb(0, 158, 232);
+                          }
+                        }
+                      }
+                    }
+                    .add-apartment-btn-none {
+                      display: none;
+                    }
+                    .apartment-input-holder {
+                      width: 100%;
+                      height: 50px;
+                      border-radius: 5px;
+                      position: relative;
+                      display: none;
+                      .close-additional-section {
+                        position: absolute;
+                        top: 50%;
+                        transform: translatey(-50%);
+                        right: 5px;
+                        .close-add-btn {
+                          padding: 5px;
+                          text-align: center;
+                          color: rgb(0, 131, 193);
+                          &:hover {
+                            color: rgb(0, 158, 232);
+                          }
+                        }
+                      }
+                    }
+                    .apartment-input-show {
+                      display: block;
+                    }
+                    .information-save-holder {
+                      width: 100%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: flex-start;
+                      gap: 10px;
+                      input {
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 5px;
+                        border: 1px solid #dedede;
+                        cursor: pointer;
+                      }
+                      span {
+                        color: #000;
+                      }
+                    }
+                  }
+                  .form-mid-bottom {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    gap: 14px;
+                    .shipping-method-div {
+                      width: 100%;
+                      h3 {
+                        line-height: 1.2;
+                        text-align: left;
+                        font-size: 18px;
+                        color: #000;
+                      }
+                    }
+                    .international-shipping-div {
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      padding: 17px;
+                      border: 1px solid rgb(0, 131, 193);
+                      border-radius: 5px;
+                      width: 100%;
+                      color: #000;
+                      background-color: rgb(241, 247, 255);
+                    }
+                  }
+                }
+                .checkout-form-bottom {
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: wrap;
+                  gap: 14px;
+                  margin-bottom: 32px;
+                  .payment-holder {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    gap: 5px;
+                    width: 100%;
+                    line-height: 1.2;
+                    .payment-div {
+                      width: 100%;
+                      h2 {
+                        color: #000;
+                        font-size: 24px;
+                      }
+                    }
+                    .text-div {
+                      line-height: 21px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .right-part {
+      flex: 0 0 43.75%;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      order: 2;
+      .right-part-inside {
+        border-left: 1px solid rgb(218, 218, 218);
+      }
+    }
+  }
+}
+@media (max-width: 999px) {
+  .main-checkout {
+    .checkout-top {
+      .top-content-holder {
+        max-width: 650px;
+        .text-content {
+          padding: 0;
+        }
+      }
+    }
+    .checkout-main-body {
+      flex-wrap: wrap;
+      .left-part {
+        flex: 0 0 100%;
+        justify-content: center;
+        width: 100%;
+        order: 2;
+        .left-part-inside {
+          padding: 0;
+        }
+      }
+      .right-part {
+        flex: 0 0 100%;
+        justify-content: center;
+        width: 100%;
+        order: 1;
+      }
+    }
+  }
+}
+@media (max-width: 749px) {
+  .main-checkout {
+    .checkout-top {
+      .top-content-holder {
+        width: 100%;
+        max-width: 749px;
+      }
+    }
+    .checkout-main-body {
+      flex-wrap: wrap;
+      .left-part {
+        flex: 0 0 100%;
+        justify-content: center;
+        width: 100%;
+        order: 2;
+        .left-part-inside {
+          width: 100%;
+          max-width: 749px;
+          padding: 0;
+          .left-part-inner {
+            padding: 0;
+            .content-holder {
+              .checkout-form {
+                .form-inside-div {
+                  .checkout-form-top {
+                    padding: 21px;
+                    margin-bottom: 0;
+                    border-bottom: 14px solid #f5f5f5;
+                  }
+                  .checkout-form-mid {
+                    padding: 21px;
+                    margin-bottom: 0;
+                    border-bottom: 14px solid #f5f5f5;
+                    .mid-all-forms {
+                      .name-surname-div {
+                        gap: 14px;
+                        flex-wrap: wrap;
+                        .name-div {
+                          flex: 0 0 100%;
+                        }
+                        .surname-div {
+                          flex: 0 0 100%;
+                        }
+                      }
+                      .postal-city-div {
+                        gap: 14px;
+                        flex-wrap: wrap;
+                        .postal-div {
+                          flex: 0 0 100%;
+                        }
+                        .city-div {
+                          flex: 0 0 100%;
+                        }
+                      }
+                    }
+                  }
+                  .checkout-form-bottom {
+                    padding: 21px;
+                    border-bottom: 14px solid #f5f5f5;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .right-part {
+        flex: 0 0 100%;
+        justify-content: center;
+        width: 100%;
+        order: 1;
+      }
+    }
+  }
+}

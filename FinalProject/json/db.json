@@ -1,0 +1,196 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Black Glasses",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.",
+      "price": "120.00",
+      "discountPercentage": 0,
+      "rating": false,
+      "in_stock": true,
+      "brand": "Ray-Ban",
+      "images": [
+        "https://porto-demo7.myshopify.com/cdn/shop/products/BlackGlasses.jpg?v=1600571397",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/BlackGlasses1.jpg?v=1600571398",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/BlackGlasses2.jpg?v=1600571398",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/BlackGlasses3.jpg?v=1600571398"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Jeans Pants",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.",
+      "price": "299.00",
+      "discountPercentage": 0,
+      "rating": false,
+      "in_stock": true,
+      "brand": "Pull&Bear",
+      "images": [
+        "https://porto-demo7.myshopify.com/cdn/shop/products/JeansPants3.jpg?v=1600571505",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/JeansPants1.jpg?v=1600571505",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/JeansPants2.jpg?v=1600571505",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/JeansPants3.jpg?v=1600571505"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Jeans Trouser",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.",
+      "price": "299.00",
+      "discountPercentage": 0,
+      "rating": true,
+      "in_stock": true,
+      "brand": "Pull&Bear",
+      "images": [
+        "https://porto-demo7.myshopify.com/cdn/shop/products/JeansPants1.jpg?v=1600571505",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/JeansPants3.jpg?v=1600571505",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/JeansPants2.jpg?v=1600571505",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/JeansPants3.jpg?v=1600571505"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Men Black Belt",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.",
+      "price": "209.00",
+      "discountPercentage": 19,
+      "rating": false,
+      "in_stock": true,
+      "brand": "Massimo Dutti",
+      "images": [
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts2_16c0f79e-e3b1-44f1-bb36-550c5f744248.jpg?v=1600571883",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts_bbcaf4e1-f925-4315-8129-a23a35f96a3b.jpg?v=1600571883",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts1_51dcc938-2f56-42d1-bbaf-b9812c68c679.jpg?v=1600571884",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts3_1d612142-44cd-4590-8020-7890c75ee487.jpg?v=1600571884"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Men Brown Belts",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.",
+      "price": "39.00",
+      "discountPercentage": 0,
+      "rating": false,
+      "in_stock": true,
+      "brand": "LC Waikiki",
+      "images": [
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts_bbcaf4e1-f925-4315-8129-a23a35f96a3b.jpg?v=1600571883",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts1_51dcc938-2f56-42d1-bbaf-b9812c68c679.jpg?v=1600571884",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts2_16c0f79e-e3b1-44f1-bb36-550c5f744248.jpg?v=1600571883",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts3_1d612142-44cd-4590-8020-7890c75ee487.jpg?v=1600571884"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Men Brown Belts",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.",
+      "price": "39.00",
+      "discountPercentage": 0,
+      "rating": false,
+      "in_stock": true,
+      "brand": "LC Waikiki",
+      "images": [
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts_bbcaf4e1-f925-4315-8129-a23a35f96a3b.jpg?v=1600571883",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts1_51dcc938-2f56-42d1-bbaf-b9812c68c679.jpg?v=1600571884",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts2_16c0f79e-e3b1-44f1-bb36-550c5f744248.jpg?v=1600571883",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts3_1d612142-44cd-4590-8020-7890c75ee487.jpg?v=1600571884"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Men Brown Belts",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.",
+      "price": "39.00",
+      "discountPercentage": 0,
+      "rating": false,
+      "in_stock": true,
+      "brand": "LC Waikiki",
+      "images": [
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts_bbcaf4e1-f925-4315-8129-a23a35f96a3b.jpg?v=1600571883",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts1_51dcc938-2f56-42d1-bbaf-b9812c68c679.jpg?v=1600571884",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts2_16c0f79e-e3b1-44f1-bb36-550c5f744248.jpg?v=1600571883",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts3_1d612142-44cd-4590-8020-7890c75ee487.jpg?v=1600571884"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Men Brown Belts",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.",
+      "price": "39.00",
+      "discountPercentage": 0,
+      "rating": false,
+      "in_stock": true,
+      "brand": "LC Waikiki",
+      "images": [
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts_bbcaf4e1-f925-4315-8129-a23a35f96a3b.jpg?v=1600571883",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts1_51dcc938-2f56-42d1-bbaf-b9812c68c679.jpg?v=1600571884",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts2_16c0f79e-e3b1-44f1-bb36-550c5f744248.jpg?v=1600571883",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts3_1d612142-44cd-4590-8020-7890c75ee487.jpg?v=1600571884"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Men Brown Belts",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.",
+      "price": "39.00",
+      "discountPercentage": 0,
+      "rating": false,
+      "in_stock": true,
+      "brand": "LC Waikiki",
+      "images": [
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts_bbcaf4e1-f925-4315-8129-a23a35f96a3b.jpg?v=1600571883",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts1_51dcc938-2f56-42d1-bbaf-b9812c68c679.jpg?v=1600571884",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts2_16c0f79e-e3b1-44f1-bb36-550c5f744248.jpg?v=1600571883",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts3_1d612142-44cd-4590-8020-7890c75ee487.jpg?v=1600571884"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Men Brown Belts",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.",
+      "price": "39.00",
+      "discountPercentage": 0,
+      "rating": false,
+      "in_stock": true,
+      "brand": "LC Waikiki",
+      "images": [
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts_bbcaf4e1-f925-4315-8129-a23a35f96a3b.jpg?v=1600571883",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts1_51dcc938-2f56-42d1-bbaf-b9812c68c679.jpg?v=1600571884",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts2_16c0f79e-e3b1-44f1-bb36-550c5f744248.jpg?v=1600571883",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts3_1d612142-44cd-4590-8020-7890c75ee487.jpg?v=1600571884"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Men Brown Belts",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.",
+      "price": "39.00",
+      "discountPercentage": 0,
+      "rating": false,
+      "in_stock": true,
+      "brand": "LC Waikiki",
+      "images": [
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts_bbcaf4e1-f925-4315-8129-a23a35f96a3b.jpg?v=1600571883",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts1_51dcc938-2f56-42d1-bbaf-b9812c68c679.jpg?v=1600571884",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts2_16c0f79e-e3b1-44f1-bb36-550c5f744248.jpg?v=1600571883",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts3_1d612142-44cd-4590-8020-7890c75ee487.jpg?v=1600571884"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Men Brown Belts",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.",
+      "price": "39.00",
+      "discountPercentage": 0,
+      "rating": false,
+      "in_stock": true,
+      "brand": "LC Waikiki",
+      "images": [
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts_bbcaf4e1-f925-4315-8129-a23a35f96a3b.jpg?v=1600571883",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts1_51dcc938-2f56-42d1-bbaf-b9812c68c679.jpg?v=1600571884",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts2_16c0f79e-e3b1-44f1-bb36-550c5f744248.jpg?v=1600571883",
+        "https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts3_1d612142-44cd-4590-8020-7890c75ee487.jpg?v=1600571884"
+      ]
+    }
+  ]
+}
