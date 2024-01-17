@@ -1,7 +1,8 @@
 import React from "react";
 import CheckOutFormTop from "./Components/CheckOutFormTop";
 import CheckOutFormMid from "./Components/CheckOutFormMid";
-import CheckOutFormBottom from "./Components/CheckOutFormBottom/CheckOutFormBottom";
+import CheckOutFormBottom from "./Components/CheckOutFormBottom";
+import PayNowButton from "./Components/PayNowButton";
 
 export default function CheckOutLeft() {
   return (
@@ -15,6 +16,7 @@ export default function CheckOutLeft() {
                   <CheckOutFormTop />
                   <CheckOutFormMid />
                   <CheckOutFormBottom />
+                  <PayNowButton />
                 </div>
               </form>
             </div>
