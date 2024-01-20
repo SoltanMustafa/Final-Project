@@ -3,6 +3,7 @@ import burgerReducer from "./features/counter/BurgerMenu";
 import stickyHeaderReducer from "./features/counter/StickyHeader";
 import quickViewReducer from "./features/counter/QuickMenu";
 import filterMenuReducer from "./features/counter/ShopFilter";
+import dashboardSideReucer from "./features/counter/DashboardSide";
 
 export const store = configureStore({
   reducer: {
@@ -10,5 +11,6 @@ export const store = configureStore({
     sideMenu: burgerReducer,
     quickView: quickViewReducer,
     filterMenu: filterMenuReducer,
+    sideBar: dashboardSideReucer,
   },
 });

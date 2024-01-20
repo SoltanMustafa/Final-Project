@@ -13,6 +13,9 @@ import ShopPage from "./layouts/Main/pages/Shop/ShopPage";
 import Login from "./layouts/Auth/pages/Login/Login";
 import Register from "./layouts/Auth/pages/Register/Register";
 import CheckOut from "./layouts/Main/pages/Checkout/CheckOut";
+import DashboardLayouts from "./layouts/Dashboard/DashboardLayouts";
+import Dashboard from "./layouts/Dashboard/pages/Dashboard/Dashboard";
+import AdminLogin from "./layouts/Dashboard/pages/AdminLogin/AdminLogin";
 
 const router = createBrowserRouter([
   {
@@ -50,7 +53,7 @@ const router = createBrowserRouter([
     element: <AuthLayouts />,
     children: [
       {
-        path: "auth",
+        path: "/auth",
         element: <Navigate to={"login"} />,
       },
       {
@@ -60,6 +63,24 @@ const router = createBrowserRouter([
       {
         path: "register",
         element: <Register />,
+      },
+    ],
+  },
+  {
+    path: "dashboard",
+    element: <DashboardLayouts />,
+    children: [
+      {
+        path: "/dashboard",
+        element: <Navigate to={"panel"} />,
+      },
+      {
+        path: "panel",
+        element: <Dashboard />,
+      },
+      {
+        path: "admin",
+        element: <AdminLogin />,
       },
     ],
   },
