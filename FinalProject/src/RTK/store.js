@@ -9,6 +9,8 @@ import productupdateReducer from "./features/counter/ProductUpdate";
 import productDeleteReducer from "./features/counter/ProductDelete";
 import brandAddReducer from "./features/counter/BrandAdd";
 import brandUpdateReducer from "./features/counter/BrandUpdate";
+import staffAddReducer from "./features/counter/StaffAdd";
+import staffUpdateReducer from "./features/counter/StaffUpdate";
 
 export const store = configureStore({
   reducer: {
@@ -22,5 +24,7 @@ export const store = configureStore({
     productDelete: productDeleteReducer,
     brandAdd: brandAddReducer,
     brandUpdate: brandUpdateReducer,
+    staffAdd: staffAddReducer,
+    staffUpdate: staffUpdateReducer,
   },
 });

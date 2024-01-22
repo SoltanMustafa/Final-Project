@@ -22,7 +22,7 @@ export default function FormButtons() {
         </div>
         <div className="button-div">
           <button type="submit" className="add-btn">
-            Add Product
+            Update Product
           </button>
         </div>
       </div>

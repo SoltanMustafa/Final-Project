@@ -4,6 +4,8 @@ import { useSelector } from "react-redux";
 import ProductUpdate from "./Components/ProductUpdate/ProductUpdate";
 import BrandAdd from "./Components/BrandAdd/BrandAdd";
 import BrandUpdate from "./Components/BrandUpdate/BrandUpdate";
+import StaffAdd from "./Components/StaffAdd/StaffAdd";
+import StaffUpdate from "./Components/StaffUpdate/StaffUpdate";
 
 export default function Drawer() {
   const setProductAdd = useSelector(
@@ -16,12 +18,21 @@ export default function Drawer() {
   const setBrandUpdate = useSelector(
     (state) => state.brandUpdate.brandUpdateActive
   );
+  const setStaffAdd = useSelector((state) => state.staffAdd.staffAddActive);
+  const setStaffUpdate = useSelector(
+    (state) => state.staffUpdate.staffUpdateActive
+  );
 
   return (
     <>
       <div
         className={`drawer ${
-          setProductAdd || setProductUpdate || setBrandAdd || setBrandUpdate
+          setProductAdd ||
+          setProductUpdate ||
+          setBrandAdd ||
+          setBrandUpdate ||
+          setStaffAdd ||
+          setStaffUpdate
             ? "drawer-show"
             : ""
         }`}
@@ -31,6 +42,8 @@ export default function Drawer() {
         <ProductUpdate />
         <BrandAdd />
         <BrandUpdate />
+        <StaffAdd />
+        <StaffUpdate />
       </div>
     </>
   );

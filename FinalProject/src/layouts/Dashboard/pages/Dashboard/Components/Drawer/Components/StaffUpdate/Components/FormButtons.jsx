@@ -1,11 +1,11 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { CloseBrandUpdate } from "../../../../../../../../../RTK/features/counter/BrandUpdate";
+import { CloseStaffUpdate } from "../../../../../../../../../RTK/features/counter/StaffUpdate";
 
 export default function FormButtons() {
-  const brandDispatch = useDispatch();
-  function handleBrandUpdate() {
-    brandDispatch(CloseBrandUpdate());
+  const updateStaffDispatch = useDispatch();
+  function handleCloseStaff() {
+    updateStaffDispatch(CloseStaffUpdate());
   }
   return (
     <>
@@ -14,14 +14,14 @@ export default function FormButtons() {
           <button
             type="button"
             className="cancel-btn"
-            onClick={handleBrandUpdate}
+            onClick={handleCloseStaff}
           >
             Cancel
           </button>
         </div>
         <div className="button-div">
           <button type="submit" className="add-btn">
-            Update Brand
+            Update Staff
           </button>
         </div>
       </div>

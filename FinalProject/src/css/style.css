@@ -9371,6 +9371,94 @@ body #root .wrapper-left-250px {
       -ms-flex-align: center;
           align-items: center;
 }
+.dashboard-main .main-section .main-section-body .dashboard-container .ourstaffpart .ourstaffpart-inside .form-and-buttons {
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .ourstaffpart .ourstaffpart-inside .form-and-buttons .content-container {
+  width: 100%;
+  padding: 16px;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .ourstaffpart .ourstaffpart-inside .form-and-buttons .content-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  gap: 2%;
+  padding: 12px 0;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .ourstaffpart .ourstaffpart-inside .form-and-buttons .content-container form .search-div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 28.2%;
+          flex: 0 0 28.2%;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .ourstaffpart .ourstaffpart-inside .form-and-buttons .content-container form .select-div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 21.5%;
+          flex: 0 0 21.5%;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .ourstaffpart .ourstaffpart-inside .form-and-buttons .content-container form .search-div,
+.dashboard-main .main-section .main-section-body .dashboard-container .ourstaffpart .ourstaffpart-inside .form-and-buttons .content-container form .select-div {
+  width: 100%;
+  border-radius: 6px;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .ourstaffpart .ourstaffpart-inside .form-and-buttons .content-container form .search-div input,
+.dashboard-main .main-section .main-section-body .dashboard-container .ourstaffpart .ourstaffpart-inside .form-and-buttons .content-container form .search-div select,
+.dashboard-main .main-section .main-section-body .dashboard-container .ourstaffpart .ourstaffpart-inside .form-and-buttons .content-container form .select-div input,
+.dashboard-main .main-section .main-section-body .dashboard-container .ourstaffpart .ourstaffpart-inside .form-and-buttons .content-container form .select-div select {
+  width: 100%;
+  width: 100%;
+  height: 48px;
+  padding: 4px 12px;
+  border: 1px solid rgb(229, 231, 235);
+  background-color: rgb(243, 244, 246);
+  border-radius: 6px;
+  display: block;
+  font-size: 14px;
+  color: #121212;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .ourstaffpart .ourstaffpart-inside .form-and-buttons .content-container form .search-div input:focus,
+.dashboard-main .main-section .main-section-body .dashboard-container .ourstaffpart .ourstaffpart-inside .form-and-buttons .content-container form .search-div select:focus,
+.dashboard-main .main-section .main-section-body .dashboard-container .ourstaffpart .ourstaffpart-inside .form-and-buttons .content-container form .select-div input:focus,
+.dashboard-main .main-section .main-section-body .dashboard-container .ourstaffpart .ourstaffpart-inside .form-and-buttons .content-container form .select-div select:focus {
+  background-color: rgb(255, 255, 255);
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .ourstaffpart .ourstaffpart-inside .form-and-buttons .content-container form .add-staff-section {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 17.6%;
+          flex: 0 0 17.6%;
+  width: 100%;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .ourstaffpart .ourstaffpart-inside .form-and-buttons .content-container form .filter-reset-div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 26.7%;
+          flex: 0 0 26.7%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2%;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .ourstaffpart .ourstaffpart-inside .form-and-buttons .content-container form .filter-reset-div .button-holder {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 49%;
+          flex: 0 0 49%;
+  width: 100%;
+}
 .dashboard-main .main-section .main-section-body .dashboard-container .section-show {
   display: block;
 }
@@ -10079,6 +10167,285 @@ body #root .wrapper-left-250px {
 }
 .dashboard-main .drawer .brand-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder aside .image-holder:first-child .relative p,
 .dashboard-main .drawer .brand-update-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder aside .image-holder:first-child .relative p {
+  display: block;
+}
+.dashboard-main .drawer .staff-add-container,
+.dashboard-main .drawer .staff-update-container {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background: #fff;
+  display: none;
+}
+.dashboard-main .drawer .staff-add-container .container-content,
+.dashboard-main .drawer .staff-update-container .container-content {
+  height: 100%;
+  z-index: 1;
+  position: relative;
+  overflow-y: auto;
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-header,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom: 1px solid rgb(243, 244, 246);
+  background-color: rgb(255, 255, 255);
+  z-index: 10;
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-header .header-top,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-header .header-top {
+  width: 100%;
+  padding: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgb(249, 250, 251);
+  border-bottom: 1px solid rgb(243, 244, 246);
+  color: #000;
+  position: relative;
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-header .header-top .close-btn,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-header .header-top .close-btn {
+  position: absolute;
+  right: 0;
+  left: auto;
+  margin-right: 24px;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  color: rgb(239, 68, 68);
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  z-index: 10;
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-header .header-top .close-btn:hover,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-header .header-top .close-btn:hover {
+  background-color: rgb(253, 174, 174);
+  color: #353535;
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-header .header-bottom,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-header .header-bottom {
+  width: 100%;
+}
+.dashboard-main .drawer .staff-add-container .container-content .form-buttons,
+.dashboard-main .drawer .staff-update-container .container-content .form-buttons {
+  position: sticky;
+  width: 100%;
+  z-index: 10;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2%;
+  padding: 32px 24px;
+  border-top: 1px solid rgb(243, 244, 246);
+  background-color: rgb(249, 250, 251);
+}
+.dashboard-main .drawer .staff-add-container .container-content .form-buttons .button-div,
+.dashboard-main .drawer .staff-update-container .container-content .form-buttons .button-div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 49%;
+          flex: 0 0 49%;
+}
+.dashboard-main .drawer .staff-add-container .container-content .form-buttons .button-div button,
+.dashboard-main .drawer .staff-update-container .container-content .form-buttons .button-div button {
+  width: 100%;
+  border: 1px solid transparent;
+  padding: 8px 16px;
+  font-weight: 500;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 8px;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+}
+.dashboard-main .drawer .staff-add-container .container-content .form-buttons .button-div .cancel-btn,
+.dashboard-main .drawer .staff-update-container .container-content .form-buttons .button-div .cancel-btn {
+  border-color: rgb(229, 231, 235);
+  background-color: rgb(255, 255, 255);
+  color: rgb(239, 68, 68);
+}
+.dashboard-main .drawer .staff-add-container .container-content .form-buttons .button-div .cancel-btn:hover,
+.dashboard-main .drawer .staff-update-container .container-content .form-buttons .button-div .cancel-btn:hover {
+  background-color: rgb(251, 228, 228);
+}
+.dashboard-main .drawer .staff-add-container .container-content .form-buttons .button-div .add-btn,
+.dashboard-main .drawer .staff-update-container .container-content .form-buttons .button-div .add-btn {
+  color: rgb(255, 255, 255);
+  background-color: rgb(16, 185, 129);
+}
+.dashboard-main .drawer .staff-add-container .container-content .form-buttons .button-div .add-btn:hover,
+.dashboard-main .drawer .staff-update-container .container-content .form-buttons .button-div .add-btn:hover {
+  background-color: rgb(10, 151, 104);
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form {
+  display: block;
+  position: relative;
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs {
+  padding: 32px 24px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name,
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-images {
+  width: 100%;
+  margin-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name label,
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images label,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name label,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-images label {
+  font-size: 14px;
+  color: rgb(31, 41, 55);
+  font-weight: 500;
+  line-height: 20px;
+  display: block;
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div,
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .input-div,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-images .input-div {
+  max-width: 65%;
+  width: 100%;
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div input,
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div textarea,
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .input-div input,
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .input-div textarea,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div input,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div textarea,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-images .input-div input,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-images .input-div textarea {
+  border: 1px solid rgb(229, 231, 235);
+  padding: 4px 12px;
+  line-height: 20px;
+  background-color: rgb(243, 244, 246);
+  border-radius: 6px;
+  width: 100%;
+  height: 48px;
+  color: rgb(31, 41, 55);
+  display: block;
+  font-size: 14px;
+  overflow: visible;
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div input:focus,
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div textarea:focus,
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .input-div input:focus,
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .input-div textarea:focus,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div input:focus,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div textarea:focus,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-images .input-div input:focus,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-images .input-div textarea:focus {
+  background-color: rgb(255, 255, 255);
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div textarea,
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .input-div textarea,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div textarea,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-images .input-div textarea {
+  padding: 12px !important;
+  height: 96px !important;
+  overflow: visible;
+  outline: none;
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder {
+  max-width: 65%;
+  width: 100%;
+  text-align: center;
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder .images-drag-div,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder .images-drag-div {
+  width: 100%;
+  padding: 20px 24px 24px 24px;
+  border: 2px dashed rgb(209, 213, 219);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder .images-drag-div input,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder .images-drag-div input {
+  display: none;
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder aside .image-holder .relative img,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder aside .image-holder .relative img {
+  width: 96px;
+  max-height: 96px;
+  height: auto;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid rgb(243, 244, 246);
+  border-radius: 6px;
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder aside .image-holder p,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder aside .image-holder p {
+  display: none;
+}
+.dashboard-main .drawer .staff-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder aside .image-holder:first-child .relative p,
+.dashboard-main .drawer .staff-update-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder aside .image-holder:first-child .relative p {
   display: block;
 }
 .dashboard-main .drawer .module-show {
