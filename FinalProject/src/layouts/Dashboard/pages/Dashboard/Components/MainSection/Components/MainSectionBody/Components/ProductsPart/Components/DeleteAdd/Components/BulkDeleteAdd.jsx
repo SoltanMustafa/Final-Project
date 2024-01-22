@@ -1,6 +1,12 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { OpenProductAdd } from "../../../../../../../../../../../../../RTK/features/counter/ProductAdd";
 
 export default function BulkDeleteAdd() {
+  const addDispatch = useDispatch();
+  const handleAddProduct = () => {
+    addDispatch(OpenProductAdd());
+  };
   return (
     <>
       <div className="right-side">
@@ -17,7 +23,7 @@ export default function BulkDeleteAdd() {
           </button>
         </div>
         <div className="right-button-holder">
-          <button type="button" className="add-btn">
+          <button type="button" className="add-btn" onClick={handleAddProduct}>
             <i className="fa-solid fa-plus"></i>
             <span>Add Product</span>
           </button>

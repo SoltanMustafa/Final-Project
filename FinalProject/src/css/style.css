@@ -8472,9 +8472,9 @@ body #root .wrapper-left-250px {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: rgb(244, 247, 246);
+  background-color: rgb(219, 236, 255);
   width: 100%;
-  font-family: "Open Sans";
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   position: relative;
 }
@@ -9084,6 +9084,123 @@ body #root .wrapper-left-250px {
   color: #000;
   background-color: rgb(229, 230, 232);
 }
+.dashboard-main .main-section .main-section-body .dashboard-container .productspart .productspart-inside .table-main-container {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid rgb(229, 231, 235);
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .productspart .productspart-inside .table-main-container .table-div {
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .productspart .productspart-inside .table-main-container .table-div .product-table {
+  width: 100%;
+  white-space: nowrap;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .productspart .productspart-inside .table-main-container .table-div .product-table .table-head {
+  text-transform: uppercase;
+  color: rgb(107, 114, 128);
+  letter-spacing: 0.025em;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 17.5px;
+  text-align: left;
+  background-color: rgb(243, 244, 246);
+  border-bottom: 1px solid rgb(229, 231, 235);
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .productspart .productspart-inside .table-main-container .table-div .product-table .table-head .head-tr {
+  width: auto;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .productspart .productspart-inside .table-main-container .table-div .product-table .table-body {
+  color: rgb(31, 41, 55);
+  background-color: rgb(255, 255, 255);
+  letter-spacing: 0.025em;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .productspart .productspart-inside .table-main-container .table-div .product-table .table-body .product-tr {
+  border-bottom: 1px solid rgb(229, 231, 235);
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .productspart .productspart-inside .table-main-container .table-div .product-table .table-body .product-tr td .inside-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .productspart .productspart-inside .table-main-container .table-div .product-table .table-body .product-tr td .inside-div .switch-button-holder {
+  width: 30px;
+  height: 15px;
+  border-radius: 7.5px;
+  background-color: rgb(52, 118, 52);
+  border: 1px solid rgb(52, 118, 52);
+  position: relative;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .productspart .productspart-inside .table-main-container .table-div .product-table .table-body .product-tr td .inside-div .switch-button-holder .switch-button {
+  position: absolute;
+  right: 0;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  -webkit-transition: position 0.5s ease-in-out;
+  transition: position 0.5s ease-in-out;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .productspart .productspart-inside .table-main-container .table-div .product-table .table-body .product-tr td .inside-div .switch-button-holder .position-left {
+  left: 0;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .productspart .productspart-inside .table-main-container .table-div .product-table .table-body .product-tr td .inside-div .switch-onclick {
+  background-color: rgb(235, 40, 40);
+  border: 1px solid rgb(235, 40, 40);
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .productspart .productspart-inside .table-main-container .table-pagination .inside-pagination .main-span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .productspart .productspart-inside .table-main-container .table-pagination .inside-pagination .pagination-div nav ul li button {
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  color: rgb(75, 85, 99);
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4px 12px;
+  line-height: 20px;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .productspart .productspart-inside .table-main-container .table-pagination .inside-pagination .pagination-div nav ul li button i {
+  font-size: 10px;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .productspart .productspart-inside .table-main-container .table-pagination .inside-pagination .pagination-div nav ul li .button-half-oppacity {
+  opacity: 0.5;
+}
+.dashboard-main .main-section .main-section-body .dashboard-container .productspart .productspart-inside .table-main-container .table-pagination .inside-pagination .pagination-div nav ul li .selected-page {
+  background-color: rgb(83, 161, 105);
+  color: rgb(255, 255, 255);
+}
 .dashboard-main .main-section .main-section-body .dashboard-container .brandspart {
   width: 100%;
   height: 200px;
@@ -9140,6 +9257,353 @@ body #root .wrapper-left-250px {
 }
 .dashboard-main .main-section .main-section-body .dashboard-container .section-show {
   display: block;
+}
+.dashboard-main .drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  overflow: visible;
+  z-index: 999 !important;
+}
+.dashboard-main .drawer .drawer-mask {
+  opacity: 0.3;
+  height: 100%;
+  background: #000;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.dashboard-main .drawer .product-add-container {
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background: #fff;
+  display: none;
+}
+.dashboard-main .drawer .product-add-container .container-content {
+  height: 100%;
+  z-index: 1;
+  position: relative;
+  overflow-y: auto;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom: 1px solid rgb(243, 244, 246);
+  background-color: rgb(255, 255, 255);
+  z-index: 10;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-header .header-top {
+  width: 100%;
+  padding: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgb(249, 250, 251);
+  border-bottom: 1px solid rgb(243, 244, 246);
+  color: #000;
+  position: relative;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-header .header-top .close-btn {
+  position: absolute;
+  right: 0;
+  left: auto;
+  margin-right: 24px;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  color: rgb(239, 68, 68);
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  z-index: 10;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-header .header-top .close-btn:hover {
+  background-color: rgb(253, 174, 174);
+  color: #353535;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-header .header-bottom {
+  width: 100%;
+}
+.dashboard-main .drawer .product-add-container .container-content .form-buttons {
+  position: sticky;
+  width: 100%;
+  z-index: 10;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2%;
+  padding: 32px 24px;
+  border-top: 1px solid rgb(243, 244, 246);
+  background-color: rgb(249, 250, 251);
+}
+.dashboard-main .drawer .product-add-container .container-content .form-buttons .button-div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 49%;
+          flex: 0 0 49%;
+}
+.dashboard-main .drawer .product-add-container .container-content .form-buttons .button-div button {
+  width: 100%;
+  border: 1px solid transparent;
+  padding: 8px 16px;
+  font-weight: 500;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 8px;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+}
+.dashboard-main .drawer .product-add-container .container-content .form-buttons .button-div .cancel-btn {
+  border-color: rgb(229, 231, 235);
+  background-color: rgb(255, 255, 255);
+  color: rgb(239, 68, 68);
+}
+.dashboard-main .drawer .product-add-container .container-content .form-buttons .button-div .cancel-btn:hover {
+  background-color: rgb(251, 228, 228);
+}
+.dashboard-main .drawer .product-add-container .container-content .form-buttons .button-div .add-btn {
+  color: rgb(255, 255, 255);
+  background-color: rgb(16, 185, 129);
+}
+.dashboard-main .drawer .product-add-container .container-content .form-buttons .button-div .add-btn:hover {
+  background-color: rgb(10, 151, 104);
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form {
+  display: block;
+  position: relative;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs {
+  padding: 32px 24px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-description,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-brand,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-price,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-sale-price,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-quantity {
+  width: 100%;
+  margin-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name label,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-description label,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images label,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-brand label,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-price label,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-sale-price label,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-quantity label {
+  font-size: 14px;
+  color: rgb(31, 41, 55);
+  font-weight: 500;
+  line-height: 20px;
+  display: block;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-description .input-div,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .input-div,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-brand .input-div,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-price .input-div,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-sale-price .input-div,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-quantity .input-div {
+  max-width: 65%;
+  width: 100%;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div input,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div textarea,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-description .input-div input,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-description .input-div textarea,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .input-div input,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .input-div textarea,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-brand .input-div input,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-brand .input-div textarea,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-price .input-div input,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-price .input-div textarea,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-sale-price .input-div input,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-sale-price .input-div textarea,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-quantity .input-div input,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-quantity .input-div textarea {
+  border: 1px solid rgb(229, 231, 235);
+  padding: 4px 12px;
+  line-height: 20px;
+  background-color: rgb(243, 244, 246);
+  border-radius: 6px;
+  width: 100%;
+  height: 48px;
+  color: rgb(31, 41, 55);
+  display: block;
+  font-size: 14px;
+  overflow: visible;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div input:focus,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div textarea:focus,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-description .input-div input:focus,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-description .input-div textarea:focus,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .input-div input:focus,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .input-div textarea:focus,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-brand .input-div input:focus,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-brand .input-div textarea:focus,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-price .input-div input:focus,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-price .input-div textarea:focus,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-sale-price .input-div input:focus,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-sale-price .input-div textarea:focus,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-quantity .input-div input:focus,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-quantity .input-div textarea:focus {
+  background-color: rgb(255, 255, 255);
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div textarea,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-description .input-div textarea,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .input-div textarea,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-brand .input-div textarea,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-price .input-div textarea,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-sale-price .input-div textarea,
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-quantity .input-div textarea {
+  padding: 12px !important;
+  height: 96px !important;
+  overflow: visible;
+  outline: none;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-brand .selector-container {
+  max-width: 65%;
+  width: 100%;
+  position: relative;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-brand .selector-container .search-wrapper {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-height: 22px;
+  padding: 5px;
+  position: relative;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-brand .selector-container .search-wrapper .search-box {
+  background: transparent;
+  border: none;
+  margin-top: 3px;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-brand .selector-container .option-list {
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 1px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  display: none;
+  color: #121212;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-brand .selector-container .option-list ul {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  margin: 0;
+  max-height: 250px;
+  overflow-y: auto;
+  padding: 0;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-brand .selector-container .option-list ul li {
+  padding: 5px;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-brand .selector-container .list-open {
+  display: block;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder {
+  max-width: 65%;
+  width: 100%;
+  text-align: center;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder .images-drag-div {
+  width: 100%;
+  padding: 20px 24px 24px 24px;
+  border: 2px dashed rgb(209, 213, 219);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder .images-drag-div input {
+  display: none;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder aside .image-holder .relative img {
+  width: 96px;
+  max-height: 96px;
+  height: auto;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid rgb(243, 244, 246);
+  border-radius: 6px;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder aside .image-holder p {
+  display: none;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder aside .image-holder:first-child .relative p {
+  display: block;
+}
+.dashboard-main .drawer .module-show {
+  display: block;
+}
+.dashboard-main .drawer-show {
+  width: 100%;
 }
 
 .section-title {

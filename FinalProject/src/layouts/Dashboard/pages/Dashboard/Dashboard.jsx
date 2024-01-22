@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import LeftBar from "./Components/LeftBar/LeftBar";
 import MainSection from "./Components/MainSection/MainSection";
+import Drawer from "./Components/Drawer/Drawer";
 
 export default function Dashboard() {
   const [menuSelection, setMenuSelection] = useState(1);
@@ -15,6 +16,7 @@ export default function Dashboard() {
           handleMenuSelection={handleMenuSelection}
         />
         <MainSection menuSelection={menuSelection} />
+        <Drawer />
       </div>
     </>
   );
