@@ -1,6 +1,13 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { OpenBrandAdd } from "../../../../../../../../../../../../../RTK/features/counter/BrandAdd";
 
 export default function BulkDeleteAdd() {
+  const brandDispatch = useDispatch();
+
+  function handleBrandAdd() {
+    brandDispatch(OpenBrandAdd());
+  }
   return (
     <>
       <div className="right-side">
@@ -17,7 +24,7 @@ export default function BulkDeleteAdd() {
           </button>
         </div>
         <div className="right-button-holder">
-          <button type="button" className="add-btn">
+          <button type="button" className="add-btn" onClick={handleBrandAdd}>
             <i className="fa-solid fa-plus"></i>
             <span>Add Brand</span>
           </button>

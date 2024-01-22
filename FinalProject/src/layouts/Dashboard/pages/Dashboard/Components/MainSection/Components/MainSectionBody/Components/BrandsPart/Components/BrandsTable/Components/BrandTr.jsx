@@ -1,28 +1,31 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { OpenProductUpdate } from "../../../../../../../../../../../../../RTK/features/counter/ProductUpdate";
 import { OpenProductDelete } from "../../../../../../../../../../../../../RTK/features/counter/ProductDelete";
+import { OpenBrandUpdate } from "../../../../../../../../../../../../../RTK/features/counter/BrandUpdate";
 
-export default function ProductTr() {
+export default function BrandTr() {
+  const brandUpdateDispatch = useDispatch();
   const deleteDispatch = useDispatch();
-  const updateDispatch = useDispatch();
   const [publish, setPublish] = useState(false);
   const handlePublished = () => {
     setPublish((prevpub) => !prevpub);
   };
 
-  function handleOpenDelete() {
+  function handleDeleteModule() {
     deleteDispatch(OpenProductDelete());
   }
 
-  function handleUpdateButton() {
-    updateDispatch(OpenProductUpdate());
+  function handleBrandUpdate() {
+    brandUpdateDispatch(OpenBrandUpdate());
   }
   return (
     <>
       <tr className="product-tr">
         <td className="px-4 py-2">
           <input type="checkbox" id="" name="" />
+        </td>
+        <td className="px-4 py-2">
+          <div className="text-sm">0C24</div>
         </td>
         <td className="px-4 py-2">
           <div className="flex items-center">
@@ -33,27 +36,10 @@ export default function ProductTr() {
                 className="object-cover w-full h-full rounded-full"
               />
             </div>
-            <div className="product-name-div">
-              <h2 className="text-sm font-medium">Premium T-Shirt</h2>
-            </div>
           </div>
         </td>
         <td className="px-4 py-2">
-          <div className="text-sm">Pull & Bear</div>
-        </td>
-        <td className="px-4 py-2">
-          <span className="text-sm font-bold">$450.00</span>
-        </td>
-        <td className="px-4 py-2">
-          <span className="text-sm font-bold">$430.00</span>
-        </td>
-        <td className="px-4 py-2">
-          <span className="text-sm">9944</span>
-        </td>
-        <td className="px-4 py-2">
-          <span className="inline-flex px-2 text-xs font-medium leading-5 rounded-full text-emerald-600 bg-emerald-100">
-            Selling
-          </span>
+          <h2 className="text-sm font-medium">Pull & Bear</h2>
         </td>
         <td className="px-4 py-2">
           <a
@@ -83,7 +69,7 @@ export default function ProductTr() {
           <div className="flex justify-end text-right">
             <button
               className="p-2 text-gray-400 hover:text-emerald-600"
-              onClick={handleUpdateButton}
+              onClick={handleBrandUpdate}
             >
               <p className="text-xl">
                 <i className="fa-regular fa-pen-to-square"></i>
@@ -91,7 +77,7 @@ export default function ProductTr() {
             </button>
             <button
               className="p-2 text-gray-400 hover:text-red-600"
-              onClick={handleOpenDelete}
+              onClick={handleDeleteModule}
             >
               <p className="text-xl">
                 <i className="fa-regular fa-trash-can"></i>

@@ -486,111 +486,83 @@
                 }
               }
             }
-            .table-main-container {
-              width: 100%;
-              overflow: hidden;
-              border: 1px solid rgb(229 231 235);
+          }
+        }
+        .brandspart {
+          width: 100%;
+          display: none;
+          .brandspart-inside {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .brands-filter-main {
+              background-color: rgb(255 255 255);
+              margin-bottom: 16px;
               border-radius: 8px;
-              margin-bottom: 32px;
-              .table-div {
+              overflow: hidden;
+              width: 100%;
+              .filter-container {
                 width: 100%;
-                white-space: nowrap;
-                overflow-x: auto;
-                .product-table {
-                  width: 100%;
-                  white-space: nowrap;
-                  .table-head {
-                    text-transform: uppercase;
-                    color: rgb(107 114 128);
-                    letter-spacing: 0.025em;
-                    font-weight: 600;
-                    font-size: 13px;
-                    line-height: 17.5px;
-                    text-align: left;
-                    background-color: rgb(243 244 246);
-                    border-bottom: 1px solid rgb(229 231 235);
-                    .head-tr {
-                      width: auto;
-                    }
-                  }
-                  .table-body {
-                    color: rgb(31 41 55);
-                    background-color: rgb(255 255 255);
-                    letter-spacing: 0.025em;
-                    .product-tr {
-                      border-bottom: 1px solid rgb(229 231 235);
-                      td {
-                        .inside-div {
-                          display: flex;
-                          align-items: center;
-                          justify-content: center;
-                          width: 100%;
-                          height: 100%;
-                          .switch-button-holder {
-                            width: 30px;
-                            height: 15px;
-                            border-radius: 7.5px;
-                            background-color: rgb(52, 118, 52);
-                            border: 1px solid rgb(52, 118, 52);
-                            position: relative;
-                            transition: 0.5s ease-in-out;
-                            cursor: pointer;
-                            .switch-button {
-                              position: absolute;
-                              right: 0;
-                              height: 13px;
-                              width: 13px;
-                              border-radius: 50%;
-                              background-color: rgb(255, 255, 255);
-                              transition: position 0.5s ease-in-out;
-                            }
-                            .position-left {
-                              left: 0;
-                            }
-                          }
-                          .switch-onclick {
-                            background-color: rgb(235, 40, 40);
-                            border: 1px solid rgb(235, 40, 40);
-                          }
-                        }
+                padding: 16px;
+                .filter-form {
+                  padding: 12px 0;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 2%;
+                  .input-holder {
+                    flex: 0 0 49%;
+                    .input-itself {
+                      width: 100%;
+                      display: block;
+                      height: 48px;
+                      padding: 4px 12px;
+                      border: 1px solid rgb(229 231 235);
+                      background-color: rgb(243 244 246);
+                      border-radius: 8px;
+                      font-size: 14px;
+                      color: #121212;
+                      &:focus {
+                        background-color: rgb(255, 255, 255);
                       }
                     }
                   }
-                }
-              }
-              .table-pagination {
-                .inside-pagination {
-                  .main-span {
+                  .button-holder {
+                    flex: 0 0 49%;
                     display: flex;
                     align-items: center;
-                    text-transform: uppercase;
-                  }
-                  .pagination-div {
-                    nav {
-                      ul {
-                        li {
-                          button {
-                            transition-duration: 0.15s;
-                            color: rgb(75 85 99);
-                            font-weight: 500;
-                            border-radius: 6px;
-                            border: 1px solid transparent;
-                            display: inline-flex;
-                            justify-content: center;
-                            align-items: center;
-                            padding: 4px 12px;
-                            line-height: 20px;
-                            i {
-                              font-size: 10px;
-                            }
-                          }
-                          .button-half-oppacity {
-                            opacity: 0.5;
-                          }
-                          .selected-page {
-                            background-color: rgb(83, 161, 105);
-                            color: rgb(255, 255, 255);
-                          }
+                    justify-content: center;
+                    gap: 2%;
+                    .button-div {
+                      flex: 0 0 49%;
+                      margin: 0 4px;
+                      button {
+                        width: 100%;
+                        height: 48px;
+                        padding: 8px 16px;
+                        border: 1px solid transparent;
+                        transition: 0.15s;
+                        font-weight: 500;
+                        font-size: 14px;
+                        border-radius: 8px;
+                        line-height: 20px;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                      }
+                      .filter-btn {
+                        color: rgb(255 255 255);
+                        background-color: rgb(4 120 87);
+                        &:hover {
+                          background-color: rgb(2, 92, 66);
+                        }
+                      }
+                      .reset-btn {
+                        color: rgb(75 85 99);
+                        background-color: rgb(229 231 235);
+                        &:hover {
+                          background-color: rgb(200, 204, 210);
                         }
                       }
                     }
@@ -598,17 +570,6 @@
                 }
               }
             }
-          }
-        }
-        .brandspart {
-          width: 100%;
-          height: 200px;
-          display: none;
-          .brandspart-inside {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
           }
         }
         .orderspart {
@@ -657,7 +618,8 @@
       left: 0;
       height: 100%;
     }
-    .product-add-container {
+    .product-add-container,
+    .product-update-container {
       width: 85%;
       height: 100%;
       position: absolute;
@@ -833,6 +795,7 @@
                       background: transparent;
                       border: none;
                       margin-top: 3px;
+                      width: 100%;
                     }
                   }
                   .option-list {
@@ -911,11 +874,252 @@
         }
       }
     }
+    .brand-add-container,
+    .brand-update-container {
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      background: #fff;
+      display: none;
+      .container-content {
+        height: 100%;
+        z-index: 1;
+        position: relative;
+        overflow-y: auto;
+        .product-add-header {
+          display: flex;
+          position: sticky;
+          top: 0;
+          width: 100%;
+          flex-direction: column;
+          border-bottom: 1px solid rgb(243 244 246);
+          background-color: rgb(255, 255, 255);
+          z-index: 10;
+          .header-top {
+            width: 100%;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(249 250 251);
+            border-bottom: 1px solid rgb(243 244 246);
+            color: #000;
+            position: relative;
+            .close-btn {
+              position: absolute;
+              right: 0;
+              left: auto;
+              margin-right: 24px;
+              transition-duration: 0.15s;
+              color: rgb(239 68 68);
+              background-color: rgb(255 255 255);
+              border-radius: 50%;
+              width: 40px;
+              height: 40px;
+              text-align: center;
+              line-height: 40px;
+              z-index: 10;
+              &:hover {
+                background-color: rgb(253, 174, 174);
+                color: #353535;
+              }
+            }
+          }
+          .header-bottom {
+            width: 100%;
+          }
+        }
+        .form-buttons {
+          position: sticky;
+          width: 100%;
+          z-index: 10;
+          right: 0;
+          bottom: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 2%;
+          padding: 32px 24px;
+          border-top: 1px solid rgb(243 244 246);
+          background-color: rgb(249 250 251);
+          .button-div {
+            flex: 0 0 49%;
+            button {
+              width: 100%;
+              border: 1px solid transparent;
+              padding: 8px 16px;
+              font-weight: 500;
+              line-height: 30px;
+              font-size: 14px;
+              text-align: center;
+              border-radius: 8px;
+              transition-duration: 0.15s;
+            }
+            .cancel-btn {
+              border-color: rgb(229 231 235);
+              background-color: rgb(255, 255, 255);
+              color: rgb(239 68 68);
+              &:hover {
+                background-color: rgb(251, 228, 228);
+              }
+            }
+            .add-btn {
+              color: rgb(255, 255, 255);
+              background-color: rgb(16 185 129);
+              &:hover {
+                background-color: rgb(10, 151, 104);
+              }
+            }
+          }
+        }
+        .product-add-body {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          height: 100%;
+          .product-add-form {
+            display: block;
+            position: relative;
+            .form-inputs {
+              padding: 32px 24px;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              justify-content: center;
+              .product-title-name,
+              .product-images {
+                width: 100%;
+                margin-bottom: 24px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                flex-wrap: wrap;
+                label {
+                  font-size: 14px;
+                  color: rgb(31 41 55);
+                  font-weight: 500;
+                  line-height: 20px;
+                  display: block;
+                }
+                .input-div {
+                  max-width: 65%;
+                  width: 100%;
+                  input,
+                  textarea {
+                    border: 1px solid rgb(229 231 235);
+                    padding: 4px 12px;
+                    line-height: 20px;
+                    background-color: rgb(243 244 246);
+                    border-radius: 6px;
+                    width: 100%;
+                    height: 48px;
+                    color: rgb(31 41 55);
+                    display: block;
+                    font-size: 14px;
+                    overflow: visible;
+                    &:focus {
+                      background-color: rgb(255, 255, 255);
+                    }
+                  }
+                  textarea {
+                    padding: 12px !important;
+                    height: 96px !important;
+                    overflow: visible;
+                    outline: none;
+                  }
+                }
+              }
+              .product-images {
+                .drag-image-holder {
+                  max-width: 65%;
+                  width: 100%;
+                  text-align: center;
+                  .images-drag-div {
+                    width: 100%;
+                    padding: 20px 24px 24px 24px;
+                    border: 2px dashed rgb(209 213 219);
+                    border-radius: 6px;
+                    cursor: pointer;
+                    input {
+                      display: none;
+                    }
+                  }
+                  aside {
+                    .image-holder {
+                      .relative {
+                        img {
+                          width: 96px;
+                          max-height: 96px;
+                          height: auto;
+                          display: inline-flex;
+                          vertical-align: middle;
+                          margin: 8px;
+                          padding: 8px;
+                          border: 1px solid rgb(243 244 246);
+                          border-radius: 6px;
+                        }
+                      }
+                      p {
+                        display: none;
+                      }
+                      &:first-child {
+                        .relative {
+                          p {
+                            display: block;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     .module-show {
       display: block;
     }
   }
   .drawer-show {
     width: 100%;
+  }
+  .delete-wrapper {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -100%;
+    left: -100%;
+    z-index: 40;
+    .delete-container {
+      opacity: 1;
+      max-width: 576px;
+      width: 100%;
+      border-radius: 8px;
+      padding: 16px 24px;
+      background-color: rgb(255 255 255);
+      overflow: hidden;
+      .container-body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        color: #121212;
+        padding: 24px 32px 16px 32px;
+        text-align: center;
+        margin-bottom: 24px;
+      }
+    }
+  }
+  .delete-shower {
+    width: 100%;
+    top: 0;
+    left: 0;
   }
 }
