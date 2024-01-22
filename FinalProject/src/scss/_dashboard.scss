@@ -574,18 +574,121 @@
         }
         .orderspart {
           width: 100%;
-          height: 200px;
           display: none;
           .orderspart-inside {
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
+            .form-and-buttons {
+              width: 100%;
+              margin-bottom: 20px;
+              border-radius: 8px;
+              overflow: hidden;
+              background-color: rgb(255 255 255);
+              .main-container {
+                width: 100%;
+                padding: 16px;
+                form {
+                  width: 100%;
+                  .form-top {
+                    width: 100%;
+                    padding: 8px 0;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1%;
+                    .holder-div {
+                      flex: 0 0 19.2%;
+                      width: 100%;
+                      input,
+                      select {
+                        width: 100%;
+                        padding: 4px 12px;
+                        font-size: 14px;
+                        line-height: 20px;
+                        height: 48px;
+                        display: block;
+                        color: #121212;
+                        border-radius: 8px;
+                        border: 1px solid rgb(229 231 235);
+                        background-color: rgb(243 244 246);
+                        &:focus {
+                          background-color: rgb(255, 255, 255);
+                        }
+                      }
+                    }
+                  }
+                  .form-bottom {
+                    width: 100%;
+                    padding: 8px 0;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2%;
+                    .holder-div {
+                      flex: 0 0 32%;
+                      width: 100%;
+                      label {
+                        color: rgb(31 41 55);
+                        font-size: 14px;
+                        line-height: 20px;
+                        display: block;
+                      }
+                      input {
+                        width: 100%;
+                        height: 48px;
+                        border-radius: 8px;
+                        color: rgb(31 41 55);
+                        font-size: 14px;
+                        line-height: 20px;
+                        padding: 4px 12px;
+                        background-color: rgb(243 244 246);
+                      }
+                      .buttons-inside {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 2%;
+                        button {
+                          flex: 0 0 49%;
+                          margin-top: 20px;
+                          border-radius: 8px;
+                          padding: 8px 16px;
+                          border: 1px solid transparent;
+                          text-align: center;
+                          font-size: 14px;
+                          line-height: 20px;
+                          height: 48px;
+                          transition: 0.15s;
+                        }
+                        .filter-btn {
+                          color: rgb(255, 255, 255);
+                          background-color: rgb(35, 106, 54);
+                          &:hover {
+                            background-color: rgb(50, 137, 73);
+                          }
+                        }
+                        .reset-btn {
+                          color: #121212;
+                          background-color: rgb(229 231 235);
+                          &:hover {
+                            background-color: rgb(237, 237, 255);
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
         .ourstaffpart {
           width: 100%;
-          height: 200px;
           display: none;
           .ourstaffpart-inside {
             width: 100%;
