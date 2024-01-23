@@ -22,7 +22,7 @@ export default function AdminLogin() {
       SuperAdminLogin(values)
         .then(({ data }) => {
           console.log({ data });
-          localStorage.setItem("token", data.token);
+          localStorage.setItem("token", data?.token);
           setAdmin(data.user);
         })
         .catch((err) => {

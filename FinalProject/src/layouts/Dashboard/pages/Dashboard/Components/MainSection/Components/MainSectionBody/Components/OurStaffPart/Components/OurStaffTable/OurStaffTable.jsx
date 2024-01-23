@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import StaffTr from "./Components/StaffTr";
 import StaffTableHead from "./Components/StaffTableHead";
 import TablePagination from "./Components/Pagination/TablePagination";
+import { AdminCall } from "../../../../../../../../../../../../services/Admin";
+import { useState } from "react";
 
 export default function OurStaffTable() {
+  const [adminData, setAdminData] = useState([]);
+
+  useEffect(() => {
+    AdminCall().then((r) => {
+      const data = r?.data;
+      setAdminData(data);
+    });
+  }, [adminData]);
+
   return (
     <>
       <div className="table-main-container">
@@ -13,14 +24,9 @@ export default function OurStaffTable() {
               <StaffTableHead />
             </thead>
             <tbody className="table-body">
-              <StaffTr />
-              <StaffTr />
-              <StaffTr />
-              <StaffTr />
-              <StaffTr />
-              <StaffTr />
-              <StaffTr />
-              <StaffTr />
+              {adminData?.map((admin) => {
+                return <StaffTr admin={admin} />;
+              })}
             </tbody>
           </table>
         </div>

@@ -19,3 +19,10 @@ export const AdminCall = async () => {
   let { data } = await API.get("/dashboard/users");
   return data;
 };
+
+export const AdminDelete = async ({ id, requesData }) => {
+  let { data } = await API.delete(`/dashboard/users/${id}`, {
+    data: requesData,
+  });
+  return data;
+};
