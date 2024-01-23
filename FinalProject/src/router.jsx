@@ -84,7 +84,6 @@ const router = createBrowserRouter([
         element: (
           <ProtectedDashboard>
             <Dashboard />
-            cd
           </ProtectedDashboard>
         ),
       },

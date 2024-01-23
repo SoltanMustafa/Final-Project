@@ -1,29 +1,44 @@
 import React, { useRef, useState } from "react";
 import DragImage from "./DragImage";
+import { useDispatch } from "react-redux";
+import { setData } from "../../../../../../../../../../../RTK/features/counter/BrandImageAdd";
 
 export default function BrandImagesinput() {
   const [images, setImages] = useState([]);
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef(null);
+  const brandImageDispatch = useDispatch();
 
   function selectFiles(event) {
-    const files = event.target.files;
-    if (files.length == 0) return;
+    const files = event.dataTransfer.files;
     if (images.length + files.length > 1) {
       alert("You can't upload more than 1 image.");
       return;
     }
+
     for (let i = 0; i < files.length; i++) {
-      if (files[i].type.split("/")[0] !== "image") continue;
-      if (!images.some((e) => e.name === files[i].name)) {
+      if (files[i].type.split("/")[0] !== "image") {
+        alert("Only image files are allowed.");
+        continue;
+      }
+
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64Data = reader.result;
         setImages((prevImages) => [
           ...prevImages,
           {
             name: files[i].name,
-            url: URL.createObjectURL(files[i]),
+            url: base64Data, // Base64-encoded image data
           },
         ]);
-      }
+        console.log(
+          `Image "${files[i].name}" added to state with base64 data:`,
+          base64Data
+        );
+      };
+
+      reader.readAsDataURL(files[i]);
     }
   }
 
@@ -31,6 +46,7 @@ export default function BrandImagesinput() {
     setImages((prevImages) => {
       return prevImages.filter((_, i) => i !== index);
     });
+    brandImageDispatch(setData(""));
   }
 
   function onDragOver(event) {
@@ -52,16 +68,31 @@ export default function BrandImagesinput() {
       alert("You can't upload more than 1 image.");
       return;
     }
-    for (let i = 0; i < files.length; i++) {
-      if (files[i].type.split("/")[0] !== "image") continue;
 
-      setImages((prevImages) => [
-        ...prevImages,
-        {
-          name: files[i].name,
-          url: URL.createObjectURL(files[i]),
-        },
-      ]);
+    for (let i = 0; i < files.length; i++) {
+      if (files[i].type.split("/")[0] !== "image") {
+        alert("Only image files are allowed.");
+        continue;
+      }
+
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64Data = reader.result;
+        setImages((prevImages) => [
+          ...prevImages,
+          {
+            name: files[i].name,
+            url: base64Data, // Base64-encoded image data
+          },
+        ]);
+        console.log(
+          `Image "${files[i].name}" added to state with base64 data:`,
+          base64Data
+        );
+        brandImageDispatch(setData(base64Data));
+      };
+
+      reader.readAsDataURL(files[i]);
     }
   }
 

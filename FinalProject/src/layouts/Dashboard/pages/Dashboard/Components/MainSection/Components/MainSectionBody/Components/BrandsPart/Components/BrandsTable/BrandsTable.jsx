@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import TableHead from "./Components/TableHead";
 import BrandTr from "./Components/BrandTr";
 import TablePanigation from "./Components/Pagination/TablePagination";
+import { GetBrands } from "../../../../../../../../../../../../services/Product";
 
 export default function BrandsTable() {
+  const [brandData, setBrandData] = useState([]);
+  useEffect(() => {
+    GetBrands().then((r) => {
+      const data = r?.data;
+      console.log("data", data);
+      setBrandData(data);
+    });
+  }, []);
+
   return (
     <>
       <div className="table-main-container">
@@ -13,15 +23,9 @@ export default function BrandsTable() {
               <TableHead />
             </thead>
             <tbody className="table-body">
-              <BrandTr />
-              <BrandTr />
-              <BrandTr />
-              <BrandTr />
-              <BrandTr />
-              <BrandTr />
-              <BrandTr />
-              <BrandTr />
-              <BrandTr />
+              {brandData?.map((brand) => {
+                return <BrandTr brand={brand} />;
+              })}
             </tbody>
           </table>
         </div>

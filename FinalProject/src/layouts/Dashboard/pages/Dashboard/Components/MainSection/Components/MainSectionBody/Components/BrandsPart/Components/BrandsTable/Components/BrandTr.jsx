@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { OpenProductDelete } from "../../../../../../../../../../../../../RTK/features/counter/ProductDelete";
 import { OpenBrandUpdate } from "../../../../../../../../../../../../../RTK/features/counter/BrandUpdate";
 
-export default function BrandTr() {
+export default function BrandTr({ brand }) {
   const brandUpdateDispatch = useDispatch();
   const deleteDispatch = useDispatch();
   const [publish, setPublish] = useState(false);
@@ -25,21 +25,21 @@ export default function BrandTr() {
           <input type="checkbox" id="" name="" />
         </td>
         <td className="px-4 py-2">
-          <div className="text-sm">0C24</div>
+          <div className="text-sm">{brand._id.slice(0, 4)}</div>
         </td>
         <td className="px-4 py-2">
           <div className="flex items-center">
             <div className="relative rounded-full inline-block w-8 h-8 overflow-hidden p-1 mr-2 ">
               <img
-                src="https://res.cloudinary.com/ahossain/image/upload/v1682058933/product/CMTHP-COR12-deep-ash-920x920.webp"
-                alt=""
+                src={brand.image.url}
+                alt={brand.name}
                 className="object-cover w-full h-full rounded-full"
               />
             </div>
           </div>
         </td>
         <td className="px-4 py-2">
-          <h2 className="text-sm font-medium">Pull & Bear</h2>
+          <h2 className="text-sm font-medium">{brand.name}</h2>
         </td>
         <td className="px-4 py-2">
           <a
