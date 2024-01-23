@@ -1,6 +1,36 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { useFormik } from "formik";
+import { SuperAdminLogin } from "../../../../services/Admin";
+import { useNavigate } from "react-router-dom";
+import { DashboardContext } from "../../../../contexts/DashboardContext";
 
 export default function AdminLogin() {
+  let navigate = useNavigate();
+  const { admin, setAdmin } = useContext(DashboardContext);
+  useEffect(() => {
+    if (admin) {
+      navigate("/dashboard");
+    }
+  }, [admin]);
+
+  const formik = useFormik({
+    initialValues: {
+      password: "",
+      email: "",
+    },
+    onSubmit: (values) => {
+      SuperAdminLogin(values)
+        .then(({ data }) => {
+          console.log({ data });
+          localStorage.setItem("token", data.token);
+          setAdmin(data.user);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+  });
+
   return (
     <>
       <div className="background w-full h-screen p-[100px] overflow-hidden bg-green-600">
@@ -13,13 +43,15 @@ export default function AdminLogin() {
               </p>
             </div>
             <div className="mt-5">
-              <form action>
+              <form action onSubmit={formik.handleSubmit}>
                 <div className="relative mt-6">
                   <input
                     type="email"
                     name="email"
                     id="email"
                     placeholder="Email Address"
+                    onChange={formik.handleChange}
+                    value={formik.values.email}
                     className="peer mt-1 w-full border-b-2 border-gray-300 px-0 py-1 placeholder:text-transparent focus:border-gray-500 focus:outline-none"
                     autoComplete="NA"
                   />
@@ -35,6 +67,8 @@ export default function AdminLogin() {
                     type="password"
                     name="password"
                     id="password"
+                    onChange={formik.handleChange}
+                    value={formik.values.password}
                     placeholder="Password"
                     className="peer peer mt-1 w-full border-b-2 border-gray-300 px-0 py-1 placeholder:text-transparent focus:border-gray-500 focus:outline-none"
                   />

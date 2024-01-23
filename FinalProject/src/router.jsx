@@ -16,6 +16,7 @@ import CheckOut from "./layouts/Main/pages/Checkout/CheckOut";
 import DashboardLayouts from "./layouts/Dashboard/DashboardLayouts";
 import Dashboard from "./layouts/Dashboard/pages/Dashboard/Dashboard";
 import AdminLogin from "./layouts/Dashboard/pages/AdminLogin/AdminLogin";
+import ProtectedDashboard from "./helpers/ProtectedDashboard";
 
 const router = createBrowserRouter([
   {
@@ -72,11 +73,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/dashboard",
-        element: <Navigate to={"panel"} />,
+        element: (
+          <ProtectedDashboard>
+            <Navigate to={"panel"} />
+          </ProtectedDashboard>
+        ),
       },
       {
         path: "panel",
-        element: <Dashboard />,
+        element: (
+          <ProtectedDashboard>
+            <Dashboard />
+          </ProtectedDashboard>
+        ),
       },
       {
         path: "admin",

@@ -1,10 +1,13 @@
 import React from "react";
 import MainRouter from "./router";
+import { DashboardProvider } from "./contexts/DashboardContext";
 
 export default function CounterApp() {
   return (
     <>
-      <MainRouter />
+      <DashboardProvider>
+        <MainRouter />
+      </DashboardProvider>
     </>
   );
 }
