@@ -12,6 +12,7 @@ import brandUpdateReducer from "./features/counter/BrandUpdate";
 import staffAddReducer from "./features/counter/StaffAdd";
 import staffUpdateReducer from "./features/counter/StaffUpdate";
 import editAdminDataReducer from "./features/counter/EditAdminData";
+import adminRoleReducer from "./features/counter/AdminRole";
 
 export const store = configureStore({
   reducer: {
@@ -28,5 +29,6 @@ export const store = configureStore({
     staffAdd: staffAddReducer,
     staffUpdate: staffUpdateReducer,
     editAdminData: editAdminDataReducer,
+    adminRole: adminRoleReducer,
   },
 });

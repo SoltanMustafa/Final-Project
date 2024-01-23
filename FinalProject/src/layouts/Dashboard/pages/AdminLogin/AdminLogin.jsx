@@ -3,8 +3,11 @@ import { useFormik } from "formik";
 import { SuperAdminLogin } from "../../../../services/Admin";
 import { useNavigate } from "react-router-dom";
 import { DashboardContext } from "../../../../contexts/DashboardContext";
+import { useDispatch } from "react-redux";
+import { setData } from "../../../../RTK/features/counter/AdminRole";
 
 export default function AdminLogin() {
+  const roleDispatch = useDispatch();
   let navigate = useNavigate();
   const { admin, setAdmin } = useContext(DashboardContext);
   useEffect(() => {
@@ -23,7 +26,8 @@ export default function AdminLogin() {
         .then(({ data }) => {
           console.log({ data });
           localStorage.setItem("token", data?.token);
-          setAdmin(data.user);
+          setAdmin(data?.user);
+          roleDispatch(setData(data?.user?.role));
         })
         .catch((err) => {
           console.log(err);
