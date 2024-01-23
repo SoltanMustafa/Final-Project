@@ -1,8 +1,8 @@
 import React from "react";
 import FormButtons from "./Components/FormButtons";
 import StaffUpdateHeader from "./Components/StaffUpdateHeader";
-import StaffUpdateBody from "./Components/StaffAddBody/StaffUpdateBody";
 import { useSelector } from "react-redux";
+import StaffUpdateBody from "./Components/StaffUpdateBody";
 
 export default function StaffUpdate() {
   const staffUpdateActive = useSelector(

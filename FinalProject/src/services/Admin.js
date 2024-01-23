@@ -9,3 +9,13 @@ export const SuperAdminProfileCall = async () => {
   let { data } = await API.get("/profile");
   return data;
 };
+
+export const AdminRegister = async (params) => {
+  let { data } = await API.post("/dashboard/register", params);
+  return data;
+};
+
+export const AdminCall = async () => {
+  let { data } = await API.get("/dashboard/users");
+  return data;
+};

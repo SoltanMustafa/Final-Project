@@ -1,6 +1,26 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { DashboardContext } from "../../../../../../../../../contexts/DashboardContext";
 
 export default function HeaderMenu() {
+  const { setAdmin } = useContext(DashboardContext);
+
+  const handleLogOut = () => {
+    setAdmin(null);
+    localStorage.removeItem("token");
+  };
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      localStorage.removeItem("token");
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
+
   const [dropdown, setDropdown] = useState(false);
   const handleDropdown = (e) => {
     e.preventDefault();
@@ -40,7 +60,7 @@ export default function HeaderMenu() {
               <i className="fa-solid fa-gear"></i>
               <span>Profile Settings</span>
             </li>
-            <li>
+            <li onClick={handleLogOut}>
               <i className="fa-solid fa-right-from-bracket"></i>
               <span>Log out</span>
             </li>

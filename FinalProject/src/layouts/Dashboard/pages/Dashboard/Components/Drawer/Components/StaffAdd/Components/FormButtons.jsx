@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { CloseStaffAdd } from "../../../../../../../../../RTK/features/counter/StaffAdd";
 
-export default function FormButtons() {
+export default function FormButtons({ formik }) {
   const staffAddDispatch = useDispatch();
   function handleCloseStaff() {
     staffAddDispatch(CloseStaffAdd());
@@ -20,7 +20,11 @@ export default function FormButtons() {
           </button>
         </div>
         <div className="button-div">
-          <button type="submit" className="add-btn">
+          <button
+            type="submit"
+            className="add-btn"
+            onSubmit={formik.handleSubmit}
+          >
             Add Staff
           </button>
         </div>
