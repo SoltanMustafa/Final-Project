@@ -9617,9 +9617,19 @@ body #root .wrapper-left-250px {
 .dashboard-main .drawer .product-add-container .container-content .product-add-body,
 .dashboard-main .drawer .product-update-container .container-content .product-add-body {
   position: relative;
-  overflow: hidden;
+  overflow: auto;
   width: 100%;
   height: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body::-webkit-scrollbar,
+.dashboard-main .drawer .product-update-container .container-content .product-add-body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.dashboard-main .drawer .product-add-container .container-content .product-add-body::-webkit-scrollbar-thumb,
+.dashboard-main .drawer .product-update-container .container-content .product-add-body::-webkit-scrollbar-thumb {
+  background-color: transparent;
 }
 .dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form,
 .dashboard-main .drawer .product-update-container .container-content .product-add-body .product-add-form {
@@ -9644,6 +9654,7 @@ body #root .wrapper-left-250px {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
 }
 .dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name,
 .dashboard-main .drawer .product-add-container .container-content .product-add-body .product-add-form .form-inputs .product-description,
@@ -10089,6 +10100,7 @@ body #root .wrapper-left-250px {
 .dashboard-main .drawer .brand-update-container .container-content .product-add-body .product-add-form .form-inputs .product-images .input-div {
   max-width: 65%;
   width: 100%;
+  overflow: hidden;
 }
 .dashboard-main .drawer .brand-add-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div input,
 .dashboard-main .drawer .brand-add-container .container-content .product-add-body .product-add-form .form-inputs .product-title-name .input-div textarea,
@@ -10145,6 +10157,8 @@ body #root .wrapper-left-250px {
 }
 .dashboard-main .drawer .brand-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder .images-drag-div input,
 .dashboard-main .drawer .brand-update-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder .images-drag-div input {
+  width: 100%;
+  height: 100%;
   display: none;
 }
 .dashboard-main .drawer .brand-add-container .container-content .product-add-body .product-add-form .form-inputs .product-images .drag-image-holder aside .image-holder .relative img,

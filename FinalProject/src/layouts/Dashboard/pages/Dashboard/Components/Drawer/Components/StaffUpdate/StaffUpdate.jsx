@@ -7,7 +7,6 @@ import { CloseStaffUpdate } from "../../../../../../../../RTK/features/counter/S
 export default function StaffUpdate() {
   const editAdminData = useSelector((state) => state.editAdminData.editData);
 
-  console.log("edit", editAdminData);
   const updateStaffDispatch = useDispatch();
   function handleCloseStaff() {
     updateStaffDispatch(CloseStaffUpdate());

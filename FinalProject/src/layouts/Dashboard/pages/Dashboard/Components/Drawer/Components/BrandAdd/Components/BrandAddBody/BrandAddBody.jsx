@@ -25,7 +25,6 @@ export default function BrandAddBody() {
       name: brandName,
       image: brandImageFormat,
     };
-    console.log("brnd", brandData);
     CreateBrand(brandData).then((r) => console.log("final", r));
   };
   return (

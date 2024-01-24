@@ -1,35 +1,62 @@
 import React, { useRef, useState } from "react";
 import DragImage from "./DragImage";
+import { useDispatch } from "react-redux";
+import { setData } from "../../../../../../../../../../../../../RTK/features/counter/AddProductData";
 
 export default function ProductImagesinput() {
+  const imageDispatch = useDispatch();
   const [images, setImages] = useState([]);
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef(null);
 
   function selectFiles(event) {
-    const files = event.target.files;
-    if (files.length == 0) return;
+    const files = event.dataTransfer.files;
     if (images.length + files.length > 4) {
       alert("You can't upload more than 4 images.");
       return;
     }
+
+    const newImages = [];
+
     for (let i = 0; i < files.length; i++) {
-      if (files[i].type.split("/")[0] !== "image") continue;
-      if (!images.some((e) => e.name === files[i].name)) {
-        setImages((prevImages) => [
-          ...prevImages,
-          {
-            name: files[i].name,
-            url: URL.createObjectURL(files[i]),
-          },
-        ]);
+      if (files[i].type.split("/")[0] !== "image") {
+        alert("Only image files are allowed.");
+        continue;
       }
+
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64Data = reader.result;
+        newImages.push({
+          name: files[i].name,
+          url: base64Data,
+        });
+
+        console.log(
+          `Image "${files[i].name}" added to state with base64 data:`,
+          base64Data
+        );
+
+        if (newImages.length === files.length) {
+          setImages((images) => [...images, ...newImages]);
+          imageDispatch(
+            setData({
+              images: [...images.map((image) => image.url)],
+            })
+          );
+        }
+      };
+
+      reader.readAsDataURL(files[i]);
     }
   }
 
   function deleteImage(index) {
     setImages((prevImages) => {
-      return prevImages.filter((_, i) => i !== index);
+      const newImages = [...prevImages];
+      newImages.splice(index, 1);
+      imageDispatch(setData({ images: newImages }));
+      return newImages;
     });
   }
 
@@ -52,16 +79,39 @@ export default function ProductImagesinput() {
       alert("You can't upload more than 4 images.");
       return;
     }
-    for (let i = 0; i < files.length; i++) {
-      if (files[i].type.split("/")[0] !== "image") continue;
 
-      setImages((prevImages) => [
-        ...prevImages,
-        {
+    const newImages = [];
+
+    for (let i = 0; i < files.length; i++) {
+      if (files[i].type.split("/")[0] !== "image") {
+        alert("Only image files are allowed.");
+        continue;
+      }
+
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64Data = reader.result;
+        newImages.push({
           name: files[i].name,
-          url: URL.createObjectURL(files[i]),
-        },
-      ]);
+          url: base64Data,
+        });
+
+        console.log(
+          `Image "${files[i].name}" added to state with base64 data:`,
+          base64Data
+        );
+
+        if (newImages.length === files.length) {
+          setImages((images) => [...images, ...newImages]);
+          imageDispatch(
+            setData({
+              images: [...images.map((image) => image.url)],
+            })
+          );
+        }
+      };
+
+      reader.readAsDataURL(files[i]);
     }
   }
 

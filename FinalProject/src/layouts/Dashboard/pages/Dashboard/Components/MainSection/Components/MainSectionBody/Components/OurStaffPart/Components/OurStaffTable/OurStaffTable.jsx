@@ -13,7 +13,7 @@ export default function OurStaffTable() {
       const data = r?.data;
       setAdminData(data);
     });
-  }, [adminData]);
+  }, []);
 
   return (
     <>
