@@ -11,7 +11,6 @@ export default function ProductBrandInput() {
   useEffect(() => {
     GetBrands().then((r) => {
       const data = r?.data;
-      console.log("data", data);
       setBrandData(data);
     });
   }, []);

@@ -12,11 +12,9 @@ export default function ProductImagesinput() {
   function selectFiles(event) {
     const files = event.dataTransfer.files;
     if (images.length + files.length > 4) {
-      alert("You can't upload more than 4 images.");
+      alert("You can't upload more than 1 image.");
       return;
     }
-
-    const newImages = [];
 
     for (let i = 0; i < files.length; i++) {
       if (files[i].type.split("/")[0] !== "image") {
@@ -27,24 +25,17 @@ export default function ProductImagesinput() {
       const reader = new FileReader();
       reader.onloadend = () => {
         const base64Data = reader.result;
-        newImages.push({
-          name: files[i].name,
-          url: base64Data,
-        });
-
+        setImages((prevImages) => [
+          ...prevImages,
+          {
+            name: files[i].name,
+            url: base64Data,
+          },
+        ]);
         console.log(
           `Image "${files[i].name}" added to state with base64 data:`,
           base64Data
         );
-
-        if (newImages.length === files.length) {
-          setImages((images) => [...images, ...newImages]);
-          imageDispatch(
-            setData({
-              images: [...images.map((image) => image.url)],
-            })
-          );
-        }
       };
 
       reader.readAsDataURL(files[i]);
@@ -53,10 +44,9 @@ export default function ProductImagesinput() {
 
   function deleteImage(index) {
     setImages((prevImages) => {
-      const newImages = [...prevImages];
-      newImages.splice(index, 1);
-      imageDispatch(setData({ images: newImages }));
-      return newImages;
+      const updatedImages = prevImages.filter((_, i) => i !== index);
+      imageDispatch(setData({ images: updatedImages.map((img) => img.url) }));
+      return updatedImages;
     });
   }
 
@@ -76,11 +66,11 @@ export default function ProductImagesinput() {
     setIsDragging(false);
     const files = event.dataTransfer.files;
     if (images.length + files.length > 4) {
-      alert("You can't upload more than 4 images.");
+      alert("You can't upload more than 1 image.");
       return;
     }
 
-    const newImages = [];
+    let base64Strings = [];
 
     for (let i = 0; i < files.length; i++) {
       if (files[i].type.split("/")[0] !== "image") {
@@ -91,24 +81,17 @@ export default function ProductImagesinput() {
       const reader = new FileReader();
       reader.onloadend = () => {
         const base64Data = reader.result;
-        newImages.push({
-          name: files[i].name,
-          url: base64Data,
-        });
+        setImages((prevImages) => [
+          ...prevImages,
+          {
+            name: files[i].name,
+            url: base64Data,
+          },
+        ]);
 
-        console.log(
-          `Image "${files[i].name}" added to state with base64 data:`,
-          base64Data
-        );
+        base64Strings.push(base64Data);
 
-        if (newImages.length === files.length) {
-          setImages((images) => [...images, ...newImages]);
-          imageDispatch(
-            setData({
-              images: [...images.map((image) => image.url)],
-            })
-          );
-        }
+        imageDispatch(setData({ images: [...base64Strings] }));
       };
 
       reader.readAsDataURL(files[i]);
