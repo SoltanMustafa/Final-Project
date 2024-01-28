@@ -1,8 +1,7 @@
 import React from "react";
-import { useSelector } from "react-redux";
 
 export default function LeftBarMenu({ menuSelection, handleMenuSelection }) {
-  const adminRole = useSelector((state) => state.adminRole.role);
+  const adminRole = localStorage.getItem("admin");
   return (
     <>
       <ul className="left-bar-menu">

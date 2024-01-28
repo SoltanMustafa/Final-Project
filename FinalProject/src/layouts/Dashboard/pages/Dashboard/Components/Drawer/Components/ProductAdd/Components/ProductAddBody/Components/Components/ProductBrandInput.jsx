@@ -18,7 +18,7 @@ export default function ProductBrandInput() {
   const handleBrandChange = (event) => {
     const selectedId = event.target.value;
     setSelectedBrandId(selectedId);
-    brandDispatch(setData({ brand: selectedBrandId }));
+    brandDispatch(setData({ brand: selectedId }));
   };
 
   return (

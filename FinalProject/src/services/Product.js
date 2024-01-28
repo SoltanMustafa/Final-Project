@@ -5,8 +5,8 @@ export const CreateBrand = async (params) => {
   return data;
 };
 
-export const GetBrands = async (params) => {
-  let { data } = await API.get("/dashboard/brands", params);
+export const GetBrands = async () => {
+  let { data } = await API.get("/dashboard/brands");
   return data;
 };
 
@@ -15,7 +15,7 @@ export const CreateProducts = async (params) => {
   return data;
 };
 
-export const GetProducts = async (params) => {
-  let { data } = await API.get("/dashboard/products", params);
+export const GetProducts = async () => {
+  let { data } = await API.get("/dashboard/products");
   return data;
 };

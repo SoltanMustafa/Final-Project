@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { OpenProductUpdate } from "../../../../../../../../../../../../../RTK/features/counter/ProductUpdate";
 import { OpenProductDelete } from "../../../../../../../../../../../../../RTK/features/counter/ProductDelete";
+import { setData } from "../../../../../../../../../../../../../RTK/features/counter/ProductUpdateDelete";
 
-export default function ProductTr() {
+export default function ProductTr({ product, brandData }) {
+  const editDispatch = useDispatch();
   const deleteDispatch = useDispatch();
   const updateDispatch = useDispatch();
   const [publish, setPublish] = useState(false);
@@ -13,11 +15,14 @@ export default function ProductTr() {
 
   function handleOpenDelete() {
     deleteDispatch(OpenProductDelete());
+    editDispatch(setData(product));
   }
 
   function handleUpdateButton() {
     updateDispatch(OpenProductUpdate());
+    editDispatch(setData(product));
   }
+  const brand = brandData.find((brand) => brand?._id === product?.brandId);
   return (
     <>
       <tr className="product-tr">
@@ -28,27 +33,36 @@ export default function ProductTr() {
           <div className="flex items-center">
             <div className="relative rounded-full inline-block w-8 h-8 overflow-hidden p-1 mr-2 ">
               <img
-                src="https://res.cloudinary.com/ahossain/image/upload/v1682058933/product/CMTHP-COR12-deep-ash-920x920.webp"
-                alt=""
+                src={product.images[0].url}
+                alt={product.title}
                 className="object-cover w-full h-full rounded-full"
               />
             </div>
             <div className="product-name-div">
-              <h2 className="text-sm font-medium">Premium T-Shirt</h2>
+              <h2 className="text-sm font-medium">
+                {product.title.length > 22
+                  ? `${product.title.substring(0, 22)}...`
+                  : product.title}
+              </h2>
             </div>
           </div>
         </td>
         <td className="px-4 py-2">
-          <div className="text-sm">Pull & Bear</div>
+          <div className="text-sm">{brand?.name}</div>
         </td>
         <td className="px-4 py-2">
-          <span className="text-sm font-bold">$450.00</span>
+          <span className="text-sm font-bold">${product.productPrice}</span>
         </td>
         <td className="px-4 py-2">
-          <span className="text-sm font-bold">$430.00</span>
+          <span className="text-sm font-bold">
+            $
+            {`${
+              product.salePrice > 0 ? product.salePrice : product.productPrice
+            }`}
+          </span>
         </td>
         <td className="px-4 py-2">
-          <span className="text-sm">9944</span>
+          <span className="text-sm">{product.stock}</span>
         </td>
         <td className="px-4 py-2">
           <span className="inline-flex px-2 text-xs font-medium leading-5 rounded-full text-emerald-600 bg-emerald-100">

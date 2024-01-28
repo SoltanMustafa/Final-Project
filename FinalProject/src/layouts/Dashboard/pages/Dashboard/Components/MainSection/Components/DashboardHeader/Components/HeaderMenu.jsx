@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { DashboardContext } from "../../../../../../../../../contexts/DashboardContext";
 
 export default function HeaderMenu() {
@@ -7,19 +7,8 @@ export default function HeaderMenu() {
   const handleLogOut = () => {
     setAdmin(null);
     localStorage.removeItem("token");
+    localStorage.removeItem("admin");
   };
-
-  useEffect(() => {
-    const handleBeforeUnload = () => {
-      localStorage.removeItem("token");
-    };
-
-    window.addEventListener("beforeunload", handleBeforeUnload);
-
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-  }, []);
 
   const [dropdown, setDropdown] = useState(false);
   const handleDropdown = (e) => {

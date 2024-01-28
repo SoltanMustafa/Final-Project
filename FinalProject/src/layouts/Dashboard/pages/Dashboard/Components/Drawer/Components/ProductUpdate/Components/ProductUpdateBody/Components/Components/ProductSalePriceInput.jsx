@@ -6,7 +6,7 @@ export default function ProductSalePriceInput() {
       <div className="product-sale-price">
         <label htmlFor="">Sale Price</label>
         <div className="input-div">
-          <input type="text" placeholder="$0" />
+          <input type="number" placeholder="$0" />
         </div>
       </div>
     </>

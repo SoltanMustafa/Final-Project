@@ -24,7 +24,7 @@ export default function BrandsTable() {
             </thead>
             <tbody className="table-body">
               {brandData?.map((brand) => {
-                return <BrandTr brand={brand} />;
+                return <BrandTr key={brand._id} brand={brand} />;
               })}
             </tbody>
           </table>

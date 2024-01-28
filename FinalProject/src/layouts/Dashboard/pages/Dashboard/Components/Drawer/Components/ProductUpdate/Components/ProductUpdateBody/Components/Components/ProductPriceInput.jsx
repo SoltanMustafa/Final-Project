@@ -1,12 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { setData } from "../../../../../../../../../../../../RTK/features/counter/UpdateProductData";
 
-export default function ProductPriceInput() {
+export default function ProductPriceInput({ editData }) {
+  const currentPrice = editData?.productPrice;
+  const [productPrice, setProductPrice] = useState("");
+  console.log("price", productPrice);
+  const priceDispatch = useDispatch();
+  useEffect(() => {
+    setProductPrice(currentPrice);
+  }, [currentPrice]);
+
+  useEffect(() => {
+    priceDispatch(setData({ price: Number(productPrice) }));
+  }, [productPrice]);
+
+  const handlePriceUpdate = (event) => {
+    setProductPrice(event.target.value);
+  };
   return (
     <>
       <div className="product-price">
         <label htmlFor="">Product Price</label>
         <div className="input-div">
-          <input type="text" placeholder="$0" />
+          <input
+            type="number"
+            placeholder="$0"
+            onChange={handlePriceUpdate}
+            defaultValue={currentPrice}
+          />
         </div>
       </div>
     </>
