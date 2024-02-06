@@ -6,6 +6,6 @@ export const API = axios.create({
   baseURL: import.meta.env.VITE_BASE_URL,
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${token}`,
+    Authorization: token ? `Bearer ${token}` : undefined,
   },
 });

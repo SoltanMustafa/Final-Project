@@ -3,7 +3,8 @@ import { useDispatch } from "react-redux";
 import { OpenQuickView } from "../../../../../../RTK/features/counter/QuickMenu";
 import { Link } from "react-router-dom";
 
-export default function CarouselItem() {
+export default function CarouselItem({ product, brandData }) {
+  console.log("product", product);
   const dispatch = useDispatch();
 
   const handleQuickMenu = (e) => {
@@ -12,6 +13,7 @@ export default function CarouselItem() {
     document.body.style.overflow = "hidden";
   };
 
+  const brand = brandData.find((brand) => brand._id === product?.brandId);
   return (
     <>
       <div className="carousel-item">
@@ -20,19 +22,23 @@ export default function CarouselItem() {
             <div className="product-image">
               <Link to={"/product/:id"} className="product-detail-link">
                 <div className="labels labels-active">
-                  <div className="onsale">
-                    <span className="sale-lable">Sale</span>
-                  </div>
+                  {product?.salePrice > 0 ? (
+                    <div className="onsale">
+                      <span className="sale-lable">Sale</span>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                 </div>
                 <div className="image-holder">
                   <img
-                    src="https://porto-demo7.myshopify.com/cdn/shop/products/JeansPants_300x300_crop_center.jpg?v=1600571505"
-                    alt=""
+                    src={product?.images[0].url}
+                    alt={product?.title}
                     className="first"
                   />
                   <img
-                    src="https://porto-demo7.myshopify.com/cdn/shop/products/JeansPants1_300x300_crop_center.jpg?v=1600571505"
-                    alt=""
+                    src={product?.images[1].url}
+                    alt={product?.title}
                     className="second"
                   />
                 </div>
@@ -50,9 +56,9 @@ export default function CarouselItem() {
               </div>
             </div>
             <div className="product-content">
-              <span className="brand-list">Pull & Bear</span>
+              <span className="brand-list">{brand?.name}</span>
               <div className="product-title">
-                <h3 className="product-title-h3">Jeans Pants</h3>
+                <h3 className="product-title-h3">{product?.title}</h3>
               </div>
               <div className="rating-wrap">
                 <div className="rating-content">
@@ -68,14 +74,25 @@ export default function CarouselItem() {
                 </div>
               </div>
               <div className="product-price mb-[18px]">
-                <del>
-                  <span className="prev-price">
-                    <span className="prev-money">$259.00</span>
-                  </span>
-                </del>
+                {product?.salePrice > 0 ? (
+                  <del>
+                    <span className="prev-price">
+                      <span className="prev-money">
+                        ${product?.productPrice}
+                      </span>
+                    </span>
+                  </del>
+                ) : (
+                  ""
+                )}
                 <ins>
                   <span className="current-price">
-                    <span className="current-money">$209.00</span>
+                    <span className="current-money">
+                      $
+                      {product?.salePrice > 0
+                        ? product?.salePrice
+                        : product?.productPrice}
+                    </span>
                   </span>
                 </ins>
               </div>

@@ -3,12 +3,37 @@ import CarouselItem from "./CarouselItem";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import {
+  GetSiteBrands,
+  GetSiteProducts,
+} from "../../../../../../services/siteProduct";
 
 export default function Carousel() {
   const [productData, setProductData] = useState([]);
+  const [brandData, setBrandData] = useState([]);
 
   useEffect(() => {
-    function fetchProduct() {}
+    const fetchProduct = async () => {
+      try {
+        const r = await GetSiteProducts();
+        const data = r?.data?.product?.slice(0, 5);
+
+        setProductData(data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    fetchProduct();
+  }, []);
+
+  useEffect(() => {
+    const fetchBrand = async () => {
+      const r = await GetSiteBrands();
+      const data = r?.data;
+      setBrandData(data);
+    };
+    fetchBrand();
   }, []);
 
   const options = {
@@ -31,11 +56,15 @@ export default function Carousel() {
       <div className="products-slider">
         <div className="slider-container">
           <OwlCarousel className="owl-carousel" {...options}>
-            <CarouselItem />
-            <CarouselItem />
-            <CarouselItem />
-            <CarouselItem />
-            <CarouselItem />
+            {productData.map((product) => {
+              return (
+                <CarouselItem
+                  key={product?._id}
+                  product={product}
+                  brandData={brandData}
+                />
+              );
+            })}
           </OwlCarousel>
         </div>
       </div>
