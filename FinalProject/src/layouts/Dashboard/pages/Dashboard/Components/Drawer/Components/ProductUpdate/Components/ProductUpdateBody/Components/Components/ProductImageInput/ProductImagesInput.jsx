@@ -1,35 +1,98 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import DragImage from "./DragImage";
+import { useDispatch } from "react-redux";
+import { setData } from "../../../../../../../../../../../../../RTK/features/counter/UpdateProductData";
 
-export default function ProductImagesinput() {
+export default function ProductImagesinput({ editData }) {
+  const currentImages = editData?.images;
   const [images, setImages] = useState([]);
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef(null);
+  const imageDispatch = useDispatch();
+  console.log("currentImages", currentImages);
 
-  function selectFiles(event) {
-    const files = event.target.files;
-    if (files.length == 0) return;
-    if (images.length + files.length > 4) {
-      alert("You can't upload more than 4 images.");
-      return;
-    }
-    for (let i = 0; i < files.length; i++) {
-      if (files[i].type.split("/")[0] !== "image") continue;
-      if (!images.some((e) => e.name === files[i].name)) {
-        setImages((prevImages) => [
-          ...prevImages,
-          {
-            name: files[i].name,
-            url: URL.createObjectURL(files[i]),
-          },
-        ]);
+  useEffect(() => {
+    setImages(currentImages);
+  }, [currentImages]);
+
+  let imageUrls = [];
+
+  if (images && Array.isArray(images)) {
+    imageUrls = images.map((photo) => photo.url);
+  } else {
+    console.error("Images is not defined or not an array");
+  }
+
+  useEffect(() => {
+    async function convertAndDispatch() {
+      try {
+        const base64Array = await Promise.all(
+          imageUrls.map(async (imageUrl) => {
+            const response = await fetch(imageUrl);
+            const blob = await response.blob();
+
+            return new Promise((resolve, reject) => {
+              const reader = new FileReader();
+              reader.onloadend = () => {
+                const base64WithPrefix = `data:image/webp;base64,${
+                  reader.result.split(",")[1]
+                }`;
+                resolve(base64WithPrefix);
+              };
+              reader.onerror = reject;
+              reader.readAsDataURL(blob);
+            });
+          })
+        );
+
+        console.log("Base64 Array:", base64Array);
+
+        imageDispatch(setData({ images: [...base64Array] }));
+      } catch (error) {
+        console.error("Hata:", error);
       }
     }
+
+    convertAndDispatch();
+  }, [imageUrls]);
+
+  function selectFiles(event) {
+    const files = event.dataTransfer.files;
+    setImages((prevImages) => {
+      if (prevImages.length + files.length > 4) {
+        alert("You can't upload more than 4 images.");
+        return prevImages;
+      }
+
+      let newImages = [...prevImages];
+
+      for (let i = 0; i < files.length; i++) {
+        if (files[i].type.split("/")[0] !== "image") {
+          alert("Only image files are allowed.");
+          continue;
+        }
+
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          const base64Data = reader.result;
+          newImages.push({
+            name: files[i].name,
+            url: base64Data,
+          });
+        };
+
+        reader.readAsDataURL(files[i]);
+      }
+
+      return newImages;
+    });
   }
 
   function deleteImage(index) {
     setImages((prevImages) => {
-      return prevImages.filter((_, i) => i !== index);
+      const updatedImages = prevImages.filter((_, i) => i !== index);
+      imageDispatch(setData({ images: updatedImages.map((img) => img.url) }));
+      return updatedImages;
     });
   }
 
@@ -49,19 +112,35 @@ export default function ProductImagesinput() {
     setIsDragging(false);
     const files = event.dataTransfer.files;
     if (images.length + files.length > 4) {
-      alert("You can't upload more than 4 images.");
+      alert("You can't upload more than 4 image.");
       return;
     }
-    for (let i = 0; i < files.length; i++) {
-      if (files[i].type.split("/")[0] !== "image") continue;
 
-      setImages((prevImages) => [
-        ...prevImages,
-        {
-          name: files[i].name,
-          url: URL.createObjectURL(files[i]),
-        },
-      ]);
+    let base64Strings = [];
+
+    for (let i = 0; i < files.length; i++) {
+      if (files[i].type.split("/")[0] !== "image") {
+        alert("Only image files are allowed.");
+        continue;
+      }
+
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64Data = reader.result;
+        setImages((prevImages) => [
+          ...prevImages,
+          {
+            name: files[i].name,
+            url: base64Data,
+          },
+        ]);
+
+        base64Strings.push(base64Data);
+
+        imageDispatch(setData({ images: [...base64Strings] }));
+      };
+
+      reader.readAsDataURL(files[i]);
     }
   }
 
@@ -102,14 +181,16 @@ export default function ProductImagesinput() {
             )}
           </div>
           <aside className="flex flex-row flex-wrap mt-4">
-            {images.map((images, index) => (
-              <DragImage
-                images={images}
-                index={index}
-                deleteImage={deleteImage}
-                key={index}
-              />
-            ))}
+            {images &&
+              images.length > 0 &&
+              images.map((image, index) => (
+                <DragImage
+                  image={image}
+                  index={index}
+                  deleteImage={deleteImage}
+                  key={index}
+                />
+              ))}
           </aside>
         </div>
       </div>

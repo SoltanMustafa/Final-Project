@@ -66,7 +66,7 @@ export default function ProductImagesinput() {
     setIsDragging(false);
     const files = event.dataTransfer.files;
     if (images.length + files.length > 4) {
-      alert("You can't upload more than 1 image.");
+      alert("You can't upload more than 4 image.");
       return;
     }
 
@@ -90,6 +90,8 @@ export default function ProductImagesinput() {
         ]);
 
         base64Strings.push(base64Data);
+
+        console.log("base64St", base64Strings);
 
         imageDispatch(setData({ images: [...base64Strings] }));
       };

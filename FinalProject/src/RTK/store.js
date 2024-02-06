@@ -16,6 +16,7 @@ import brandImageAddReducer from "./features/counter/BrandImageAdd";
 import addProductDataReducer from "./features/counter/AddProductData";
 import editProductDataReducer from "./features/counter/ProductUpdateDelete";
 import updateProductDataReducer from "./features/counter/UpdateProductData";
+import editBrandDataRecuer from "./features/counter/BrandUpdateDelete";
 
 export const store = configureStore({
   reducer: {
@@ -36,5 +37,6 @@ export const store = configureStore({
     addProductData: addProductDataReducer,
     editProductData: editProductDataReducer,
     updateProductData: updateProductDataReducer,
+    editBrandData: editBrandDataRecuer,
   },
 });

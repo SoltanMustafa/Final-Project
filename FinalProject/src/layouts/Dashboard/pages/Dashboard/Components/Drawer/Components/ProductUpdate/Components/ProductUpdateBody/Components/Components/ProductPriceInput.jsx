@@ -5,7 +5,6 @@ import { setData } from "../../../../../../../../../../../../RTK/features/counte
 export default function ProductPriceInput({ editData }) {
   const currentPrice = editData?.productPrice;
   const [productPrice, setProductPrice] = useState("");
-  console.log("price", productPrice);
   const priceDispatch = useDispatch();
   useEffect(() => {
     setProductPrice(currentPrice);

@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { OpenProductDelete } from "../../../../../../../../../../../../../RTK/features/counter/ProductDelete";
 import { OpenBrandUpdate } from "../../../../../../../../../../../../../RTK/features/counter/BrandUpdate";
+import { setData } from "../../../../../../../../../../../../../RTK/features/counter/BrandUpdateDelete";
 
 export default function BrandTr({ brand }) {
   const brandUpdateDispatch = useDispatch();
+  const brandDelUpDispatch = useDispatch();
   const deleteDispatch = useDispatch();
   const [publish, setPublish] = useState(false);
   const handlePublished = () => {
@@ -13,10 +15,12 @@ export default function BrandTr({ brand }) {
 
   function handleDeleteModule() {
     deleteDispatch(OpenProductDelete());
+    brandDelUpDispatch(setData(brand));
   }
 
   function handleBrandUpdate() {
     brandUpdateDispatch(OpenBrandUpdate());
+    brandDelUpDispatch(setData(brand));
   }
   return (
     <>

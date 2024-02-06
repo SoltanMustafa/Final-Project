@@ -15,6 +15,8 @@ export default function FormButtons() {
   );
   const productQuantity = useSelector((state) => state.addProductData.quantity);
 
+  console.log("images", imagesSelector);
+
   const handleCreateProduct = (e) => {
     e.preventDefault();
     if (Number(productSalePrice) >= Number(productPrice)) {

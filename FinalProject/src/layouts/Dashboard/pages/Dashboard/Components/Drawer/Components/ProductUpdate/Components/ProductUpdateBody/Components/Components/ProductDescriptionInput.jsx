@@ -5,7 +5,6 @@ import { setData } from "../../../../../../../../../../../../RTK/features/counte
 export default function ProductDescriptionInput({ editData }) {
   const currentText = editData?.description;
   const [pDescription, setDescription] = useState("");
-  console.log(pDescription);
   const descDispatch = useDispatch();
 
   useEffect(() => {

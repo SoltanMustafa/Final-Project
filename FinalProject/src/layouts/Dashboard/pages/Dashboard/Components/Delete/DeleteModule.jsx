@@ -3,30 +3,57 @@ import { useDispatch, useSelector } from "react-redux";
 import { CloseProductDelete } from "../../../../../../RTK/features/counter/ProductDelete";
 import { setData } from "../../../../../../RTK/features/counter/EditAdminData";
 import { AdminDelete } from "../../../../../../services/Admin";
+import { resetData } from "../../../../../../RTK/features/counter/ProductUpdateDelete";
+import {
+  DeleteBrands,
+  DeleteProducts,
+} from "../../../../../../services/Product";
+import { resetBrandData } from "../../../../../../RTK/features/counter/BrandUpdateDelete";
 
 export default function DeleteModule() {
   const editAdminDispatch = useDispatch();
   const productDeleteDispatch = useDispatch();
+  const brandDeleteDispatch = useDispatch();
+  const productDispatch = useDispatch();
   const productDeleteActive = useSelector(
     (state) => state.productDelete.productDeleteActive
   );
   const editAdminData = useSelector((state) => state.editAdminData.editData);
+  const editProductData = useSelector(
+    (state) => state.editProductData.editData
+  );
+  const deleteBrand = useSelector((state) => state.editBrandData.editBrand);
 
+  console.log("brand", deleteBrand);
   function handleCloseModule() {
     productDeleteDispatch(CloseProductDelete());
     editAdminDispatch(setData([]));
+    productDispatch(resetData());
+    brandDeleteDispatch(resetBrandData());
   }
 
-  const deleteAdmin = () => {
-    const id = editAdminData?._id;
-    const data = {
-      name: editAdminData.name,
-      surname: editAdminData.surname,
-      email: editAdminData.email,
-      password: editAdminData.password,
-    };
-    console.log(id, data);
-    AdminDelete({ id, data }).then((r) => console.log("delete", r));
+  const deleteData = () => {
+    if (deleteBrand) {
+      const brandID = deleteBrand?._id;
+
+      DeleteBrands(brandID).then((r) => console.log("brandDelete", r));
+    }
+    if (editProductData) {
+      // If editProductData is available, it means it's a product data
+      const productId = editProductData._id;
+      DeleteProducts(productId).then((r) => console.log("Prodelete", r));
+    } else if (editAdminData) {
+      // If editAdminData is available, it means it's an admin data
+      const id = editAdminData._id;
+      const data = {
+        name: editAdminData.name,
+        surname: editAdminData.surname,
+        email: editAdminData.email,
+        password: editAdminData.password,
+      };
+      console.log(id, data);
+      AdminDelete({ id, data }).then((r) => console.log("delete", r));
+    }
   };
   return (
     <>
@@ -44,7 +71,10 @@ export default function DeleteModule() {
               Are You Sure! Want to Delete
               <span className="text-red-500">
                 {" "}
-                {editAdminData?.name || "T-shirt"}
+                {editAdminData?.name ||
+                  editProductData?.title ||
+                  deleteBrand?.name ||
+                  "T-shirt"}
               </span>
               ?
             </h2>
@@ -62,7 +92,7 @@ export default function DeleteModule() {
             </button>
             <button
               className="inline-flex items-center text-white rounded-lg px-4 py-2 border-emerald-500 leading-5 bg-emerald-500 h-12 hover:bg-emerald-700"
-              onClick={deleteAdmin}
+              onClick={deleteData}
             >
               Yes, Delete it
             </button>

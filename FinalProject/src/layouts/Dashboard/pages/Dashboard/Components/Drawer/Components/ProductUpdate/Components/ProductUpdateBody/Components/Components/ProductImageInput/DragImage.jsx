@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function DragImage({ images, index, deleteImage }) {
+export default function DragImage({ image, index, deleteImage }) {
   return (
     <>
       <div className="image-holder">
         <div className="relative" key={index}>
-          <img src={images.url} alt={images.name} />
+          <img src={image.url} alt={image.name} />
           <p className="absolute bottom-0 text-xs text-white bg-blue-600 w-full rounded-full py-1 text-center">
             Default Image
           </p>
