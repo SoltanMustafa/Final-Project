@@ -9,6 +9,15 @@ export const GetSiteProducts = async () => {
   }
 };
 
+export const GetSingleProduct = async (id) => {
+  try {
+    const { data } = await API.get(`/site/products/${id}`);
+    return data;
+  } catch (error) {
+    throw new Error("GetProducts Error: " + error.message);
+  }
+};
+
 export const GetSiteBrands = async () => {
   try {
     const { data } = await API.get("/site/brands");

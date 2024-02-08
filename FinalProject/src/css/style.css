@@ -3608,6 +3608,7 @@ body #root .wrapper-left-250px {
   display: block;
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 .main-container .main-wrapper .home-main .featured-products .container .products-slider .slider-container .owl-carousel .carousel-item .product-item .product-inner .product-image .product-detail-link .image-holder .first {
   position: relative;
@@ -3615,7 +3616,7 @@ body #root .wrapper-left-250px {
           transform: translateZ(0);
   display: block;
   width: 100%;
-  height: auto;
+  max-width: 100%;
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in-out 0s;
   transition: opacity 0.3s ease-in-out 0s;
@@ -3630,6 +3631,7 @@ body #root .wrapper-left-250px {
   opacity: 0;
   display: block;
   width: 100%;
+  max-width: 100%;
   -webkit-transition: opacity 0.3s ease-in-out 0s;
   transition: opacity 0.3s ease-in-out 0s;
   -webkit-transform: translateZ(0);
@@ -4768,6 +4770,7 @@ body #root .wrapper-left-250px {
   display: block;
   position: relative;
   width: 100%;
+  height: auto;
   padding: 0;
   cursor: pointer;
 }
@@ -4782,7 +4785,7 @@ body #root .wrapper-left-250px {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  height: auto;
+  height: 100%;
   opacity: 1;
   visibility: visible !important;
   -webkit-transition: opacity 0.3s ease-in-out 0s;

@@ -63,6 +63,7 @@
                           display: block;
                           position: relative;
                           width: 100%;
+                          height: auto;
                           padding: 0;
                           cursor: pointer;
                           .product-gallery {
@@ -77,7 +78,7 @@
                               width: 100%;
                               max-width: 100%;
                               margin: 0 auto;
-                              height: auto;
+                              height: 100%;
                               opacity: 1;
                               visibility: visible !important;
                               transition: opacity 0.3s ease-in-out 0s;

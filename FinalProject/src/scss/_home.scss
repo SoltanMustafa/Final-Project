@@ -738,12 +738,13 @@
                             display: block;
                             overflow: hidden;
                             position: relative;
+                            width: 100%;
                             .first {
                               position: relative;
                               transform: translateZ(0);
                               display: block;
                               width: 100%;
-                              height: auto;
+                              max-width: 100%;
                               opacity: 1;
                               transition: opacity 0.3s ease-in-out 0s;
                             }
@@ -757,6 +758,7 @@
                               opacity: 0;
                               display: block;
                               width: 100%;
+                              max-width: 100%;
                               transition: opacity 0.3s ease-in-out 0s;
                               transform: translateZ(0);
                             }

@@ -20,7 +20,10 @@ export default function CarouselItem({ product, brandData }) {
         <div className="product-item">
           <div className="product-inner">
             <div className="product-image">
-              <Link to={"/product/:id"} className="product-detail-link">
+              <Link
+                to={`product/${product._id}`}
+                className="product-detail-link"
+              >
                 <div className="labels labels-active">
                   {product?.salePrice > 0 ? (
                     <div className="onsale">

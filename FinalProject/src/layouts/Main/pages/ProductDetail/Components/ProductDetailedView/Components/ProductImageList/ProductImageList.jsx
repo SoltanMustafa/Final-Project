@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import LittleProduct from "./LittleProduct";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
-export default function ProductImageList() {
+export default function ProductImageList({ product }) {
+  if (!product || !product.images) {
+    return null;
+  }
+  const [mainImage, setMainImage] = useState(product?.images[0].url);
+
+  const handleImageChange = (imageUrl) => {
+    setMainImage(imageUrl);
+  };
+
   const options = {
     loop: false,
     nav: false,
@@ -30,8 +39,8 @@ export default function ProductImageList() {
           <div className="product-image-zoom">
             <div className="product-gallery">
               <img
-                src="https://porto-demo7.myshopify.com/cdn/shop/products/MenBrownBelts2_16c0f79e-e3b1-44f1-bb36-550c5f744248_600x_crop_center.jpg?v=1600571883"
-                alt=""
+                src={mainImage}
+                alt={product?.title}
                 className="gallery-image"
               />
               <div className="icon-zoom">
@@ -72,10 +81,15 @@ export default function ProductImageList() {
           <div className="more-views-horizontal">
             <div className="row">
               <OwlCarousel className="owl-carousel" {...options}>
-                <LittleProduct />
-                <LittleProduct />
-                <LittleProduct />
-                <LittleProduct />
+                {product?.images.map((image) => {
+                  return (
+                    <LittleProduct
+                      key={image.public_id}
+                      image={image}
+                      handleImageChange={handleImageChange}
+                    />
+                  );
+                })}
               </OwlCarousel>
             </div>
           </div>

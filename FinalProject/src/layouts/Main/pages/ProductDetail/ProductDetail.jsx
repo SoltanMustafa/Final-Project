@@ -1,43 +1,66 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../../../Components/Header/Header";
 import Footer from "../../../../Components/Footer/Footer";
 import ProductDetailedView from "./Components/ProductDetailedView/ProductDetailedView";
 import AlsoPurchased from "./Components/AlsoPurchased/AlsoPurchased";
+import { useParams } from "react-router-dom";
+import { GetSingleProduct } from "../../../../services/siteProduct";
+import Loading from "../../../../Components/Loading/Loading";
 
 export default function ProductDetail() {
+  let { id } = useParams();
+  const [product, setProduct] = useState(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+    fetchData();
+  }, [id]);
+
+  const fetchData = async () => {
+    try {
+      const r = await GetSingleProduct(id);
+      const data = r?.data;
+      setProduct(data);
+    } catch (error) {
+      console.error("Error fetching product:", error);
+    }
+  };
 
   return (
     <>
-      <Header />
-      <div className="product-detail-main">
-        <div className="link-title">
-          <div className="main-text-holder">
-            <div className="container">
-              <div className="link-way">
-                <ul>
-                  <li className="home">
-                    <a href="">Home</a>
-                  </li>
-                  <li>
-                    <span className="split">
-                      <i className="fa-solid fa-angle-right"></i>
-                    </span>
-                    <span>Men Black Belt</span>
-                  </li>
-                </ul>
+      {product ? (
+        <>
+          <Header />
+          <div className="product-detail-main">
+            <div className="link-title">
+              <div className="main-text-holder">
+                <div className="container">
+                  <div className="link-way">
+                    <ul>
+                      <li className="home">
+                        <a href="">Home</a>
+                      </li>
+                      <li>
+                        <span className="split">
+                          <i className="fa-solid fa-angle-right"></i>
+                        </span>
+                        <span>{product?.title}</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
+            <div className="main-part">
+              <ProductDetailedView product={product} />
+              <AlsoPurchased />
+            </div>
           </div>
-        </div>
-        <div className="main-part">
-          <ProductDetailedView />
-          <AlsoPurchased />
-        </div>
-      </div>
-      <Footer />
+          <Footer />
+        </>
+      ) : (
+        <Loading />
+      )}
     </>
   );
 }
