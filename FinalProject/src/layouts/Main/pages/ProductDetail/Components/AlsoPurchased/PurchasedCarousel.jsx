@@ -15,7 +15,9 @@ export default function PurchasedCarousel() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const r = await GetSiteProducts();
+        const page = 1;
+        const perPage = 10;
+        const r = await GetSiteProducts({ page, perPage });
         const products = r?.data?.product;
 
         const randomProducts = [];

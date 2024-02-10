@@ -1,11 +1,16 @@
 import { API } from "../config/axios";
 
-export const GetSiteProducts = async () => {
+export const GetSiteProducts = async ({ page, perPage }) => {
   try {
-    const { data } = await API.get("/site/products");
+    const { data } = await API.get("/site/products", {
+      params: {
+        page: page,
+        perPage: perPage,
+      },
+    });
     return data;
   } catch (error) {
-    throw new Error("GetProducts Error: " + error.message);
+    throw new Error("GetSiteProducts Error: " + error.message);
   }
 };
 

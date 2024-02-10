@@ -573,6 +573,14 @@
                         line-height: 22px;
                         font-size: 15px;
                         font-weight: 500;
+                        .suggested-product-title {
+                          display: -webkit-box;
+                          -webkit-box-orient: vertical;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                          -webkit-line-clamp: 1;
+                          cursor: pointer;
+                        }
                         .price-tag {
                           justify-content: space-between;
                           .suggested-product-prev-price {
@@ -769,7 +777,12 @@
                                   font-size: 1.0769em;
                                   line-height: 1.4;
                                   margin-bottom: 0.5rem;
-                                  display: block;
+                                  display: -webkit-box;
+                                  -webkit-box-orient: vertical;
+                                  overflow: hidden;
+                                  text-overflow: ellipsis;
+                                  -webkit-line-clamp: 1;
+                                  cursor: pointer;
                                 }
                               }
                               .items-price-in-cart {
@@ -1630,6 +1643,14 @@
                       line-height: 22px;
                       font-size: 14px;
                       font-weight: 400;
+                      .suggested-product-title {
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 1;
+                        cursor: pointer;
+                      }
                       .price-tag {
                         justify-content: space-between;
                         .suggested-product-prev-price {

@@ -458,6 +458,14 @@
                     display: flex;
                     align-items: center;
                     color: #000;
+                    span {
+                      display: -webkit-box;
+                      -webkit-box-orient: vertical;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      -webkit-line-clamp: 1;
+                      cursor: pointer;
+                    }
                   }
                   .price-holder {
                     width: 64px;

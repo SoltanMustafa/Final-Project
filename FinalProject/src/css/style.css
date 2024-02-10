@@ -1400,6 +1400,14 @@ body #root .wrapper-left-250px {
   font-size: 15px;
   font-weight: 500;
 }
+.main-header .main-webheader .bottom-header .header-left .search-area .search-extended .search-result-wrapper .results-holder .found-products .found-products-holder .mini-cart-holder .suggested-product-detail .suggested-product-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  cursor: pointer;
+}
 .main-header .main-webheader .bottom-header .header-left .search-area .search-extended .search-result-wrapper .results-holder .found-products .found-products-holder .mini-cart-holder .suggested-product-detail .price-tag {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1614,7 +1622,12 @@ body #root .wrapper-left-250px {
   font-size: 1.0769em;
   line-height: 1.4;
   margin-bottom: 0.5rem;
-  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  cursor: pointer;
 }
 .main-header .main-webheader .bottom-header .header-right .header-cart-area .mini-cart .cart-holder .cart-wrapper .cart-inner .cart-inner-content .cart-content .cart-in-basket .clearefix .cart-item-in-basket .product-details .items-price-in-cart {
   margin: 0 0 10px;
@@ -2526,6 +2539,14 @@ body #root .wrapper-left-250px {
   font-size: 14px;
   font-weight: 400;
 }
+.main-header .mobile-nav .mobile-nav-second-section .mobile-search .mobile-search-extended .search-result-wrapper .results-holder .found-products .found-products-holder .mini-cart-holder .suggested-product-detail .suggested-product-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  cursor: pointer;
+}
 .main-header .mobile-nav .mobile-nav-second-section .mobile-search .mobile-search-extended .search-result-wrapper .results-holder .found-products .found-products-holder .mini-cart-holder .suggested-product-detail .price-tag {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -3104,7 +3125,7 @@ body #root .wrapper-left-250px {
 }
 .main-container .main-wrapper .home-main .banner-masonry-section .banner-masonry-div .container .banner-grid .banner-grid-item-2 .banner-wrap .banner-content .item2-banner-inner-content .banner-little-photo {
   position: absolute;
-  z-index: 10;
+  z-index: 1;
   width: 3rem;
   height: 1rem;
   left: 9%;
@@ -3706,10 +3727,12 @@ body #root .wrapper-left-250px {
   font-weight: 400;
   line-height: 1.35;
   letter-spacing: -0.01em;
-  white-space: nowrap;
-  cursor: pointer;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  cursor: pointer;
   margin-bottom: 0.45rem;
   margin: 0 0 5px;
   font-family: "Poppins";
@@ -4224,11 +4247,13 @@ body #root .wrapper-left-250px {
   font-weight: 400;
   line-height: 1.35;
   letter-spacing: -0.01em;
-  white-space: nowrap;
-  cursor: pointer;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
   margin-bottom: 0.45rem;
+  cursor: pointer;
   margin: 0 0 5px;
   font-family: "Poppins";
 }
@@ -4435,10 +4460,12 @@ body #root .wrapper-left-250px {
   font-weight: 400;
   line-height: 1.35;
   letter-spacing: -0.01em;
-  white-space: nowrap;
-  cursor: pointer;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  cursor: pointer;
   margin-bottom: 0.45rem;
   margin: 0 0 5px;
   font-family: "Poppins";
@@ -5536,10 +5563,12 @@ body #root .wrapper-left-250px {
   font-weight: 400;
   line-height: 1.35;
   letter-spacing: -0.01em;
-  white-space: nowrap;
-  cursor: pointer;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  cursor: pointer;
   margin-bottom: 0.45rem;
   margin: 0 0 5px;
   font-family: "Poppins";
@@ -6167,7 +6196,12 @@ body #root .wrapper-left-250px {
 .main-cart-container .main-cart-wrapper .with-main-section .container .row .with-main-content .main-inside .cart-form .row .carts-main-left .cart-table-wrap .cart-table tbody tr .product-name a {
   color: #222529;
   margin-bottom: 7px;
-  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  cursor: pointer;
   font-weight: 500;
 }
 .main-cart-container .main-cart-wrapper .with-main-section .container .row .with-main-content .main-inside .cart-form .row .carts-main-left .cart-table-wrap .cart-table tbody tr .product-quantity .input-box {
@@ -7150,6 +7184,14 @@ body #root .wrapper-left-250px {
       -ms-flex-align: center;
           align-items: center;
   color: #000;
+}
+.main-checkout .checkout-main-body .right-part .right-part-inside .total-content-holder .inside-content-holder .content-container .products-column .checkout-product .text-holder span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  cursor: pointer;
 }
 .main-checkout .checkout-main-body .right-part .right-part-inside .total-content-holder .inside-content-holder .content-container .products-column .checkout-product .price-holder {
   width: 64px;
@@ -8204,10 +8246,12 @@ body #root .wrapper-left-250px {
   font-weight: 400;
   line-height: 1.35;
   letter-spacing: -0.01em;
-  white-space: nowrap;
-  cursor: pointer;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  cursor: pointer;
   margin-bottom: 0.45rem;
   margin: 0 0 5px;
   font-family: "Poppins";

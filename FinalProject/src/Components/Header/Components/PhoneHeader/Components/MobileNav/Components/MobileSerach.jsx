@@ -15,7 +15,7 @@ export default function MobileSerach() {
             <i className="fa-solid fa-magnifying-glass"></i>
           </button>
         </form>
-        <div className="search-result-wrapper">
+        <div className="search-result-wrapper search-result-active">
           <div className="results-holder">
             <div className="not-products-found">No products found</div>
             <div className="found-products">
