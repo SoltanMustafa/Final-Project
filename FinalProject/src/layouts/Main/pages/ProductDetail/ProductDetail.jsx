@@ -9,6 +9,7 @@ import {
   GetSiteBrands,
 } from "../../../../services/siteProduct";
 import Loading from "../../../../Components/Loading/Loading";
+import QuickMenu from "../../../../Components/QuickMenu/QuickMenu";
 
 export default function ProductDetail() {
   let { id } = useParams();
@@ -72,6 +73,7 @@ export default function ProductDetail() {
               <AlsoPurchased />
             </div>
           </div>
+          <QuickMenu />
           <Footer />
         </>
       ) : (
