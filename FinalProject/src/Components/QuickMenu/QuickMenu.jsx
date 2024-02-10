@@ -6,6 +6,8 @@ import ProductImageMenu from "./Components/ProductImage/ProductImageList";
 
 export default function QuickMenu() {
   const dispatch = useDispatch();
+  const product = useSelector((state) => state.quickView.product);
+  const brand = useSelector((state) => state.quickView.brand);
   const quickViewActive = useSelector(
     (state) => state.quickView.quickViewActive
   );
@@ -27,8 +29,8 @@ export default function QuickMenu() {
               <div className="product-detailed-view">
                 <div className="product-essential">
                   <div className="row">
-                    <ProductImageMenu />
-                    <ProductShop />
+                    <ProductImageMenu product={product} />
+                    <ProductShop product={product} brand={brand} />
                   </div>
                 </div>
               </div>

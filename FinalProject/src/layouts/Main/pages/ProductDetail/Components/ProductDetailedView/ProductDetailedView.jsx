@@ -3,7 +3,7 @@ import ProductImageList from "./Components/ProductImageList/ProductImageList";
 import ProductShop from "./Components/ProductShop/ProductShop";
 import ProductCollateral from "./Components/ProductCollaterial/ProductCollaterial";
 
-export default function ProductDetailedView({ product }) {
+export default function ProductDetailedView({ product, brandData }) {
   return (
     <>
       <div className="product-detailed-view">
@@ -15,7 +15,7 @@ export default function ProductDetailedView({ product }) {
                   <div className="product-essential">
                     <div className="row">
                       <ProductImageList product={product} />
-                      <ProductShop product={product} />
+                      <ProductShop product={product} brandData={brandData} />
                     </div>
                   </div>
                   <ProductCollateral product={product} />

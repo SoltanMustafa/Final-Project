@@ -4,16 +4,21 @@ import Footer from "../../../../Components/Footer/Footer";
 import ProductDetailedView from "./Components/ProductDetailedView/ProductDetailedView";
 import AlsoPurchased from "./Components/AlsoPurchased/AlsoPurchased";
 import { useParams } from "react-router-dom";
-import { GetSingleProduct } from "../../../../services/siteProduct";
+import {
+  GetSingleProduct,
+  GetSiteBrands,
+} from "../../../../services/siteProduct";
 import Loading from "../../../../Components/Loading/Loading";
 
 export default function ProductDetail() {
   let { id } = useParams();
   const [product, setProduct] = useState(null);
+  const [brandData, setBrandData] = useState([]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
     fetchData();
+    fetchBrand();
   }, [id]);
 
   const fetchData = async () => {
@@ -23,6 +28,17 @@ export default function ProductDetail() {
       setProduct(data);
     } catch (error) {
       console.error("Error fetching product:", error);
+    }
+  };
+
+  const fetchBrand = async () => {
+    try {
+      const r = await GetSiteBrands();
+      const data = r?.data;
+      console.log("brand", data);
+      setBrandData(data);
+    } catch (error) {
+      console.log("Error fetching brand", erorr);
     }
   };
 
@@ -52,7 +68,7 @@ export default function ProductDetail() {
               </div>
             </div>
             <div className="main-part">
-              <ProductDetailedView product={product} />
+              <ProductDetailedView product={product} brandData={brandData} />
               <AlsoPurchased />
             </div>
           </div>

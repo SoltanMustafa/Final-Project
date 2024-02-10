@@ -4,16 +4,15 @@ import { OpenQuickView } from "../../../../../../RTK/features/counter/QuickMenu"
 import { Link } from "react-router-dom";
 
 export default function CarouselItem({ product, brandData }) {
-  console.log("product", product);
   const dispatch = useDispatch();
+  const brand = brandData.find((brand) => brand._id === product?.brandId);
 
   const handleQuickMenu = (e) => {
     e.preventDefault();
-    dispatch(OpenQuickView());
+    dispatch(OpenQuickView({ product: product, brand: brand }));
     document.body.style.overflow = "hidden";
   };
 
-  const brand = brandData.find((brand) => brand._id === product?.brandId);
   return (
     <>
       <div className="carousel-item">

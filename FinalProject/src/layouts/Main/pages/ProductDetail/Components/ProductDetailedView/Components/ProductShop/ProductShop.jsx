@@ -2,14 +2,15 @@ import React from "react";
 import ProductAddToCart from "./ProductAddToCart";
 import SocialMediaIcons from "./SocialMediaIcons";
 
-export default function ProductShop() {
+export default function ProductShop({ product, brandData }) {
+  const brand = brandData.find((brand) => brand._id === product.brandId);
   return (
     <>
       <div className="col-md-7 product-shop">
         <div className="product-shop-wrapper">
           <div className="product-name">
             <h1>
-              <a href="">Men Black Belt</a>
+              <a href="">{product?.title}</a>
             </h1>
           </div>
           <div className="product-review">
@@ -27,38 +28,42 @@ export default function ProductShop() {
           <div className="product-price-data">
             <div className="price-box">
               <div className="detail-price">
-                <del className="prev-price">
-                  <span className="money">$259.00</span>
-                </del>
+                {product?.salePrice > 0 ? (
+                  <del className="prev-price">
+                    <span className="money">${product?.productPrice}</span>
+                  </del>
+                ) : (
+                  ""
+                )}
                 <div className="current-price">
-                  <span className="money">$209.00</span>
+                  <span className="money">
+                    $
+                    {product?.salePrice > 0
+                      ? product?.salePrice
+                      : product?.productPrice}
+                  </span>
                 </div>
               </div>
             </div>
           </div>
           <div className="short-description">
-            <div className="description-inside">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat.
-            </div>
+            <div className="description-inside">{product?.description}</div>
           </div>
           <div className="product-stock-state">
             <div className="product-stock">
               <span>Availability: </span>
-              <span className="in-stock">In Stock</span>
+              <span className="in-stock">
+                {product?.stock > 0 ? "In Stock" : "Out of Stock"}
+              </span>
             </div>
             <div className="product-brand">
               <span>Brand: </span>
               <span className="brand-list">
-                <a href="">Pull & Bear</a>
+                <a href="">{brand?.name}</a>
               </span>
             </div>
           </div>
-          <ProductAddToCart />
+          <ProductAddToCart product={product} />
           <SocialMediaIcons />
         </div>
       </div>
