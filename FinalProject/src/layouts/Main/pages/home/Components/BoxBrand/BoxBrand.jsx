@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SliderItem from "./SliderItem";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import { GetSiteBrands } from "../../../../../../services/siteProduct";
 
 export default function BoxBrand() {
+  const [brandData, setBrandData] = useState([]);
+
+  useEffect(() => {
+    const fetchBrands = async () => {
+      try {
+        const r = await GetSiteBrands();
+        const data = r?.data;
+        setBrandData(data);
+      } catch (error) {
+        console.log("Error when fetching brands", error);
+      }
+    };
+    fetchBrands();
+  }, []);
   const options = {
     loop: true,
     nav: false,
@@ -29,12 +44,9 @@ export default function BoxBrand() {
               <div className="carousel-itself">
                 <div className="inside-carousel">
                   <OwlCarousel className="slider-holder" {...options}>
-                    <SliderItem />
-                    <SliderItem />
-                    <SliderItem />
-                    <SliderItem />
-                    <SliderItem />
-                    <SliderItem />
+                    {brandData.map((brand) => {
+                      return <SliderItem key={brand?._id} brand={brand} />;
+                    })}
                   </OwlCarousel>
                 </div>
               </div>

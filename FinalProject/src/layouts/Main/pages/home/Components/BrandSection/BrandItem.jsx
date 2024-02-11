@@ -1,6 +1,11 @@
 import React from "react";
 
-export default function BrandItem() {
+export default function BrandItem({ brand, productData }) {
+  const brandProduct = productData?.filter(
+    (product) => product?.brandId === brand?._id
+  );
+
+  console.log(brandProduct);
   return (
     <>
       <div className="brand-item">
@@ -9,13 +14,21 @@ export default function BrandItem() {
             <span className="thumb-info">
               <span className="thumb-image">
                 <img
-                  src="https://cdn.shopify.com/s/files/1/1613/0131/files/shop7_cat1.jpg?v=1600310193"
-                  alt=""
+                  src="./brandbackground.jpg"
+                  alt={brand?.name}
+                  className="bg-image"
+                />
+                <img
+                  src={brand?.image.url}
+                  alt={brand?.name}
+                  className="brand-image"
                 />
               </span>
               <span className="thumb-text">
-                <h3 className="sub-title">Pull & Bear</h3>
-                <span className="product-count">3 Products</span>
+                <h3 className="sub-title">{brand?.name}</h3>
+                <span className="product-count">
+                  {brandProduct.length} Products
+                </span>
               </span>
             </span>
           </a>
