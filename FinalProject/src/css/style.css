@@ -3175,7 +3175,7 @@ body #root .wrapper-left-250px {
           transform: translateX(-50%);
   bottom: 8.4%;
   position: absolute;
-  z-index: 10;
+  z-index: 1;
   text-align: left;
   font-size: 1rem;
 }
@@ -3292,7 +3292,7 @@ body #root .wrapper-left-250px {
 }
 .main-container .main-wrapper .home-main .banner-masonry-section .banner-masonry-div .container .banner-grid .banner-grid-item-4 .banner-wrap .banner-content .item4-inner-content .item4-all-content {
   position: absolute;
-  z-index: 10;
+  z-index: 7;
   text-align: left;
   font-size: 1rem;
   width: 80%;
@@ -3343,7 +3343,7 @@ body #root .wrapper-left-250px {
 }
 .main-container .main-wrapper .home-main .banner-masonry-section .banner-masonry-div .container .banner-grid .banner-grid-item-4 .banner-wrap .banner-content .item4-inner-content .percent50 {
   position: absolute;
-  z-index: 10;
+  z-index: 7;
   text-align: left;
   font-size: 1rem;
   left: 7%;
@@ -3389,7 +3389,7 @@ body #root .wrapper-left-250px {
   right: 7%;
   top: 8%;
   position: absolute;
-  z-index: 10;
+  z-index: 7;
   text-align: left;
   font-size: 1rem;
 }
@@ -3433,7 +3433,7 @@ body #root .wrapper-left-250px {
   right: 9%;
   bottom: 11%;
   position: absolute;
-  z-index: 10;
+  z-index: 7;
   text-align: left;
   font-size: 1rem;
 }

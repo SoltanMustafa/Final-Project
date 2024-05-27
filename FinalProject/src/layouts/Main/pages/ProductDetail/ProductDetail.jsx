@@ -39,7 +39,7 @@ export default function ProductDetail() {
       console.log("brand", data);
       setBrandData(data);
     } catch (error) {
-      console.log("Error fetching brand", erorr);
+      console.log("Error fetching brand", error);
     }
   };
 
